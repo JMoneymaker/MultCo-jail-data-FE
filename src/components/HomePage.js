@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       <Header />
       <SideBar />
-      <DynamicDataDisplay hook={useAverageDetention}>Average Detention in Days</DynamicDataDisplay>
+      <DynamicDataDisplay hook={useAverageDetention}>Average Detention</DynamicDataDisplay>
       <h1>Hello, World!</h1>
 
     </>
