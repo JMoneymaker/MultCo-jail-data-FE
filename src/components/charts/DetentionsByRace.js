@@ -49,7 +49,7 @@ const DetentionsByRaceChart = () => {
         ]}
         options={{
           is3D: true,
-          colors: ['#058F7A', '#9161A2', '#13646A', '#F7F8F8', '#1F4763', '#A2506A', '#56809A']
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }}
       />
     </>

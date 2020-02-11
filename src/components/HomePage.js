@@ -8,6 +8,7 @@ import styles from './HomePage.css';
 import './reset.css';
 import useDetentionsYearToDate from '../hooks/useDetentionsYearToDate';
 import useTotalCurrentDetentions from '../hooks/useTotalCurrentDetentions';
+import Charts from './charts/ChartContainer';
 
 const HomePage = () => {
 
@@ -18,6 +19,7 @@ const HomePage = () => {
         <div className={styles.Header}>
           <Header />
         </div>
+
 
         <div className={styles.sideBar}>
           <SideBar />
@@ -30,8 +32,7 @@ const HomePage = () => {
             <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay> */}
           </div>
 
-
-          <h1>Hello, World!</h1>
+          <Charts />
         </section>
 
       </container>;
