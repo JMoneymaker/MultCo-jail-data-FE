@@ -9,6 +9,7 @@ const useAverageDetention = (searchParams) => {
       .then(setPersons);
   };
   useEffect(() => fetchPersons(searchParams), []);
+  console.log(persons, 'PERSONS');
   return { persons };
 };
 
