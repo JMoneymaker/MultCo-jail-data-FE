@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import { getPersons } from '../services/getPersons';
 
-const useAverageDetention = (searchParams) => {
+const usePersons = (searchParams) => {
   const [persons, setPersons] = useState([]);
 
   const fetchPersons = (params) => {
     getPersons(params)
-      .then(setPersons);
+      .then(persons => {
+        setPersons(persons);
+      });
   };
   useEffect(() => fetchPersons(searchParams), []);
-  console.log(persons, 'PERSONS');
+  console.log(searchParams.toString(), 'PERSONS');
   return { persons };
 };
 
-export default useAverageDetention;
+export default usePersons;
