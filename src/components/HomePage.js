@@ -15,6 +15,9 @@ const HomePage = () => {
       <SideBar />
       <section className={styles.bodyContainer}>
         <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
+        {/* <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
+            <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay> */}
+        <h1>Hello, World! Greetings From the Home Page!</h1>
         <Charts />
       </section>
 

@@ -1,13 +1,16 @@
 import React from 'react';
 import DetentionsByRaceChart from './DetentionsByRace';
 import DetentionsByGenderChart from './DetetionsByGender';
-import styles from './ChartContainer.css';
+import PopulationByRaceChart from './PopulationByRace';
+import DetentionsByRacePreHundredThousandChart from './DetentionsByRacePerHundredThousand';
 
 const Charts = () => {
 
   return (
-    <main className={styles.ChartContainer}>
+    <main>
+      <PopulationByRaceChart />
       <DetentionsByRaceChart />
+      <DetentionsByRacePreHundredThousandChart />
       <DetentionsByGenderChart />
     </main>
   );
