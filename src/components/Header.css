@@ -8,10 +8,46 @@
   box-sizing: border-box; 
 } 
 
+.pageContainer {
+  
+}
+
+
+.Header {
+    background-color: #A4DFDA; 
+    color: #3b3a3a;
+    padding: 45px; 
+    text-align: center; 
+    width: 100%;
+    font-size: 45px;  
+    font-family: 'Playfair Display';
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
+} 
+
 
 .bodyContainer {
   font-size: 30px; 
   margin-left: 250px;
   font-family: 'Playfair Display';
+  
+
+}
+
+
+.sideBar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 2em;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  background-color: rgba(214, 212, 212, 0.74);
+}
+
+
+.dynamicDataDisplay {
 }
 

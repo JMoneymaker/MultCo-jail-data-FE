@@ -5,6 +5,7 @@ import SideBar from './SideBar';
 import DynamicDataDisplay from './DynamicDataDisplay';
 import useAverageDetention from '../hooks/useAverageDetention';
 import styles from './HomePage.css';
+import stylesSidebar from './SideBar.css';
 import './reset.css';
 import useDetentionsYearToDate from '../hooks/useDetentionsYearToDate';
 import useTotalCurrentDetentions from '../hooks/useTotalCurrentDetentions';
@@ -13,28 +14,19 @@ const HomePage = () => {
 
   return (
     <>
-      <container className={styles.pageContainer} >
+      <Header />
 
-        <div className={styles.Header}>
-          <Header />
-        </div>
+      <SideBar />
 
-        <div className={styles.sideBar}>
-          <SideBar />
-        </div>
-
-        <section className={styles.bodyContainer}>
-          <div className={styles.dynamicDataDisplay}>
-            <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
-            {/* <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
+      <section className={styles.bodyContainer}>
+        <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
+        {/* <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
             <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay> */}
-          </div>
 
 
-          <h1>Hello, World!</h1>
-        </section>
+        <h1>Hello, World!</h1>
+      </section>
 
-      </container>;
     </>
   );
 
