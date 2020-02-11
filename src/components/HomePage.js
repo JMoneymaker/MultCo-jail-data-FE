@@ -5,6 +5,7 @@ import SideBar from './SideBar';
 import DynamicDataDisplay from './DynamicDataDisplay';
 import useAverageDetention from '../hooks/useAverageDetention';
 import styles from './HomePage.css';
+import './reset.css';
 
 const HomePage = () => {
 
