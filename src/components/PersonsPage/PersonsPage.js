@@ -7,20 +7,18 @@ import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 
 const PersonsPage = () => {
-  let searchParams = new URLSearchParams(useLocation().search);
   const [minAge, setMinAge] = useState(0);
   const [maxAge, setMaxAge] = useState(Infinity);
   const [gender, setGender] = useState('');
   const [race, setRace] = useState('');
   const history = useHistory();
-  const { persons } = usePersons(searchParams);
-  console.log(persons);
+  const { persons } = usePersons();
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
     newSearchParams.set('minAge', minAge);
     newSearchParams.set('maxAge', maxAge);
-    newSearchParams.set('gender', gender);
-    newSearchParams.set('race', race);
+    gender && newSearchParams.set('gender', gender);
+    race && newSearchParams.set('race', race);
     history.push(`/persons?${newSearchParams}`);
   };
 
