@@ -14,22 +14,26 @@ const HomePage = () => {
   return (
     <>
       <container className={styles.pageContainer} >
+
         <div className={styles.Header}>
           <Header />
         </div>
+
         <div className={styles.sideBar}>
           <SideBar />
         </div>
+
         <section className={styles.bodyContainer}>
           <div className={styles.dynamicDataDisplay}>
             <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
-            <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
-            <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay>
+            {/* <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
+            <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay> */}
           </div>
 
 
           <h1>Hello, World!</h1>
         </section>
+
       </container>;
     </>
   );
