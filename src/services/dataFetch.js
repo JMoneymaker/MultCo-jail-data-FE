@@ -6,3 +6,13 @@ export const getAvgDetention = () => {
     });
 
 };
+
+export const getDetentionsYearToDate = () => {
+  return fetch('<ENTER URL>')
+    .then(res => res.json());
+};
+
+export const getTotalCurrentDetentions = () => {
+  return fetch('<ENTER URL>')
+    .then(res => res.json());
+};
