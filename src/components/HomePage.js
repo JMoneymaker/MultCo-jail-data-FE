@@ -9,6 +9,7 @@ import stylesSidebar from './SideBar.css';
 import './reset.css';
 import useDetentionsYearToDate from '../hooks/useDetentionsYearToDate';
 import useTotalCurrentDetentions from '../hooks/useTotalCurrentDetentions';
+import Charts from './charts/ChartContainer';
 
 const HomePage = () => {
 
@@ -22,9 +23,8 @@ const HomePage = () => {
         <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
         {/* <DynamicDataDisplay hook={useDetentionsYearToDate}>Total 2020</DynamicDataDisplay>
             <DynamicDataDisplay hook={useTotalCurrentDetentions}>Current Stays</DynamicDataDisplay> */}
-
-
         <h1>Hello, World!</h1>
+        <Charts />
       </section>
 
     </>

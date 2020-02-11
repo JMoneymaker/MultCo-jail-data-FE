@@ -4,10 +4,10 @@ import {
   Route,
   // Switch
 } from 'react-router-dom';
-import HomePage from '../components/HomePage';
-import PersonsPage from '../components/PersonsPage';
-import DetentionsPage from '../components/DetentionsPage';
-import DeveloperPage from '../components/DeveloperPage';
+import HomePage from './HomePage';
+import PersonsPage from './PersonsPage/PersonsPage';
+import DetentionsPage from './DetentionsPage';
+import DeveloperPage from './DeveloperPage';
 
 export default function App() {
   return (
