@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import styles from './sidebar.css';
 
 
 const SideBar = () => {
 
   return (
-    <section>
-      <NavLink to='/'>Home</NavLink>
-      <NavLink to='/detentions'>Detentions</NavLink>
-      <NavLink to='/persons'>Persons</NavLink>
-      <NavLink to='/developers'>Developers</NavLink>
+    <section className={styles.navContainer} >
+      <NavLink className={styles.home} to='/'>Home</NavLink>
+      <NavLink className={styles.detentions} to='/detentions'>Detentions</NavLink>
+      <NavLink className={styles.persons} to='/persons'>Persons</NavLink>
+      <NavLink className={styles.developers} to='/developers'>Developers</NavLink>
     </section>
   );
 

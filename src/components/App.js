@@ -4,20 +4,19 @@ import {
   Route,
   // Switch
 } from 'react-router-dom';
-import HomePage from '../components/HomePage';
-import PersonsPage from '../components/PersonsPage';
-import DetentionsPage from '../components/DetentionsPage';
-import DeveloperPage from '../components/DeveloperPage';
-import ChartContainer from '../components/charts/ChartContainer';
+import HomePage from './HomePage';
+import PersonsPage from './PersonsPage/PersonsPage';
+import DetentionsPage from './DetentionsPage';
+import DeveloperPage from './DeveloperPage';
+
 export default function App() {
   return (
-    // <Router>
-    //   <Route exact path='/' component={HomePage} />
-    //   <Route path='/persons' component={PersonsPage} />
-    //   <Route path='/detentions' component={DetentionsPage} />
-    //   <Route path='/developers' component={DeveloperPage} />
-    // </Router>
-    <ChartContainer />
+    <Router>
+      <Route exact path='/' component={HomePage} />
+      <Route path='/persons' component={PersonsPage} />
+      <Route path='/detentions' component={DetentionsPage} />
+      <Route path='/developers' component={DeveloperPage} />
+    </Router>
   );
 }
   
