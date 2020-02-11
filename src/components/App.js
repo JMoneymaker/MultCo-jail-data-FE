@@ -8,9 +8,7 @@ import HomePage from '../components/HomePage';
 import PersonsPage from '../components/PersonsPage';
 import DetentionsPage from '../components/DetentionsPage';
 import DeveloperPage from '../components/DeveloperPage';
-import ExampleChart from './charts/DetetionsByGender';
-import DetentionsByRaceChart from './charts/DetentionsByRace';
-
+import ChartContainer from '../components/charts/ChartContainer';
 export default function App() {
   return (
     // <Router>
@@ -19,7 +17,7 @@ export default function App() {
     //   <Route path='/detentions' component={DetentionsPage} />
     //   <Route path='/developers' component={DeveloperPage} />
     // </Router>
-    <DetentionsByRaceChart />
+    <ChartContainer />
   );
 }
   

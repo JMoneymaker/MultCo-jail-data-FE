@@ -6,7 +6,7 @@ const getCountByRace = () => {
     .then(res => res.json());
 };
 
-const detentionsByRaceChart = () => {
+const DetentionsByRaceChart = () => {
   const [unknownCount, setUnknownCount] = useState(0);
   const [blackCount, setBlackCount] = useState(0);
   const [hispanicCount, setHispanicCount] = useState(0);
@@ -56,5 +56,5 @@ const detentionsByRaceChart = () => {
   );
 };
 
-export default detentionsByRaceChart;
+export default DetentionsByRaceChart;
 

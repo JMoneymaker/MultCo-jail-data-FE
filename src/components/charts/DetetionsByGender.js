@@ -6,7 +6,7 @@ const getCountByGender = () => {
     .then(res => res.json());
 };
 
-const detentionsByGenderChart = () => {
+const DetentionsByGenderChart = () => {
   const [maleCount, setMaleCount] = useState(0);
   const [femaleCount, setFemaleCount] = useState(0);
   
@@ -19,8 +19,8 @@ const detentionsByGenderChart = () => {
     <>
       <h1>Detentions in Multnomah County by Gender</h1>
       <Chart
-        width={'500px'}
-        height={'300px'}
+        width={'800px'}
+        height={'800px'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -37,4 +37,4 @@ const detentionsByGenderChart = () => {
   );
 };
 
-export default detentionsByGenderChart;
+export default DetentionsByGenderChart;
