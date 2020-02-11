@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+
 * { 
   box-sizing: border-box; 
 } 
@@ -8,18 +14,23 @@
 
 
 .Header {
-    background-color: green; 
+    background-color: #A4DFDA; 
+    color: #3b3a3a;
     padding: 45px; 
     text-align: center; 
     width: 100%;
     font-size: 25px;  
+    font-family: 'Playfair Display';
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
 } 
 
 
 .bodyContainer {
   font-size: 30px; 
-  background-color: darkgoldenrod;
   margin-left: 250px;
+  font-family: 'Playfair Display';
+  
+
 }
 
 
@@ -27,11 +38,13 @@
   margin: 0;
   padding: 0;
   width: 250px;
-  background-color: #f1f1f1;
   position: fixed;
   height: 100%;
   overflow: auto;
   font-size: 2em;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  
 }
 
 .dynamicDataDisplay {
