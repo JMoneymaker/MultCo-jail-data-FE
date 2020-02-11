@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import Header from '../Header';
 import SideBar from '../SideBar';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 

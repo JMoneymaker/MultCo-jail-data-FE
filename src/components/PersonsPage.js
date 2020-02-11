@@ -2,25 +2,24 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import Header from './Header';
 import SideBar from './SideBar';
-import styles from './SideBar.css';
+import styles from './PersonsPage.css';
 
 
-const DetentionsPage = () => {
+const PersonsPage = () => {
 
   return (
     <>
       <Header />
-      
-      <div className={styles.SideBar}>
-        <SideBar />
+      <SideBar />
+      <div className={styles.pageBody} >
+        <h1>Persons!</h1>
       </div>
-      <h1>Detentions!</h1>
     </>
   );
 
 };
 
-export default DetentionsPage;
+export default PersonsPage;
 
 
 
