@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "anychart-react": "^1.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-google-charts": "^3.0.15",
