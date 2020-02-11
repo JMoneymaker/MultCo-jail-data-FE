@@ -6,8 +6,7 @@ const getCountByRace = () => {
     .then(res => res.json());
 };
 
-const DetentionsByRaceChart = () => {
-  const [unknownCount, setUnknownCount] = useState(0);
+const DetentionsByRacePreHundredThousandChart = () => {
   const [blackCount, setBlackCount] = useState(0);
   const [hispanicCount, setHispanicCount] = useState(0);
   const [pacificCount, setPacificCount] = useState(0);
@@ -18,7 +17,6 @@ const DetentionsByRaceChart = () => {
   useEffect(() => {
     getCountByRace()
       .then(res => {
-        setUnknownCount(res[0].count), 
         setBlackCount(res[1].count),
         setHispanicCount(res[2].count),
         setPacificCount(res[3].count),
@@ -30,31 +28,29 @@ const DetentionsByRaceChart = () => {
 
   return (
     <>
-      <h1>Detentions in Multnomah County by Race</h1>
+      <h1>Detentions in Multnomah County by Race Per 100,000 Population</h1>
       <Chart
         width={'800px'}
         height={'800px'}
-        chartType="PieChart"
+        chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[
           ['Race', 'Arrests'],
-          ['Unknown', unknownCount],
-          ['Black', blackCount],
-          ['Hispanic', hispanicCount],
-          ['Pacific', pacificCount],
-          ['Asian', asianCount],
-          ['White', whiteCount],
-          ['Native American', nativeAmericanCount],
+          ['Black', blackCount / 56569 * 100000],
+          ['Native American', nativeAmericanCount / 8515 * 100000],
+          ['Hispanic', hispanicCount / 88966 * 100000],
+          ['White', whiteCount / 652045 * 100000],
+          ['Pacific', pacificCount / 8515 * 100000],
+          ['Asian', asianCount / 72700 * 100000],
 
         ]}
         options={{
-          is3D: true,
-          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A']
         }}
       />
     </>
   );
 };
 
-export default DetentionsByRaceChart;
+export default DetentionsByRacePreHundredThousandChart;
 
