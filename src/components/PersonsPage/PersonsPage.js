@@ -6,6 +6,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 
+
 const PersonsPage = () => {
   let searchParams = new URLSearchParams(useLocation().search);
   const [minAge, setMinAge] = useState(0);
