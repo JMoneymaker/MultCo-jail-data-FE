@@ -3,14 +3,17 @@ import Header from '../Header';
 import SideBar from '../SideBar';
 import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
+import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
+import DetentionDetails from './DetentionDetails';
 import styles from './DetentionsPage.css';
-
 
 const DetentionsPage = () => {
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
   const { detentions } = useDetentions();
+  const { detention: selectedDetention, fetchDetention: fetchSelectedDetention } = useDetention();
+
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
     arrestingAgency && newSearchParams.set('arrestingAgency', arrestingAgency);
@@ -22,6 +25,7 @@ const DetentionsPage = () => {
       <SideBar />
       <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
       <div className={styles.QueryControls}>
+        Arresting Agency:
         <select onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
           <option value="Beaverton Police">Beaverton Police</option>
@@ -51,9 +55,10 @@ const DetentionsPage = () => {
       </div>
       <table className={styles.tbody}>
         <tbody>
-          {detentions.map((detention) => <DetentionRow key={detention._id} detention={detention}/>)}
+          {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
         </tbody>
       </table>
+      <DetentionDetails detention={selectedDetention} />
     </>
   );
 
