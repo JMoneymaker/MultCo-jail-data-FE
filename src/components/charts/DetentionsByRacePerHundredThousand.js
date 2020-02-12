@@ -45,7 +45,8 @@ const DetentionsByRacePreHundredThousandChart = () => {
 
         ]}
         options={{
-          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A']
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],
+          legend: { position: 'none' }
         }}
       />
     </>
