@@ -22,8 +22,8 @@ const DetentionsPage = () => {
     <>
       <Header />
       <SideBar />
-      <h1>Test!</h1>
       <div className="queryControls">
+        Arresting Agency:
         <select onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
           <option value="Beaverton Police">Beaverton Police</option>

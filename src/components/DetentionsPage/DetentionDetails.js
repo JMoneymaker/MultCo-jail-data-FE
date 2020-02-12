@@ -15,12 +15,12 @@ const DetentionDetails = ({ detention }) => {
         <li>Assigned Facility: {detention.currentBookingState.assignedFacility}</li>
         <li>Projected Release Date: {detention.currentBookingState.projectedReleaseDate}</li>
         <li>Release Date: {detention.releaseDate}</li>
-        <li>Charges: {detention.currentCaseState.charges.map((charge) => {
+        <li>Charges: {detention.currentCaseState && detention.currentCaseState.charges.map((charge) => {
           return (
             <ul key={charge._id}>
               <li>{charge.description}</li>
-              <li>{charge.bail}</li>
-              <li>{charge.status}</li>
+              <li>Bail: ${charge.bail}</li>
+              <li>Status: {charge.status}</li>
             </ul>);})
         }
         </li>
