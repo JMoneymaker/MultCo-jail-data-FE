@@ -1,12 +1,17 @@
 import React from 'react';
 
-const DetentionRow = ({ detention }) => {
+
+const DetentionRow = ({ detention, selectedDetention, fetchSelectedDetention }) => {
+  const handleClick = (id) => {
+    fetchSelectedDetention(id);
+
+  };
   return (
     <tr>
       <td>{detention.bookingNumber}</td>
       <td>{detention.bookingDate}</td>
       <td>{detention.arrestingAgency}</td>
-      <td>details</td>
+      <td onClick={() => {handleClick(selectedDetention._id); }}>details</td>
     </tr>
   );
 };

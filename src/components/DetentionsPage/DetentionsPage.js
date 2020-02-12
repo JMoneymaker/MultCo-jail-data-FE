@@ -3,6 +3,7 @@ import Header from '../Header';
 import SideBar from '../SideBar';
 import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
+import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
 
 
@@ -10,6 +11,8 @@ const DetentionsPage = () => {
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
   const { detentions } = useDetentions();
+  const { detention: selectedDetention, fetchDetention: fetchSelectedDetention } = useDetention();
+
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
     arrestingAgency && newSearchParams.set('arrestingAgency', arrestingAgency);
@@ -50,7 +53,7 @@ const DetentionsPage = () => {
       </div>
       <table>
         <tbody>
-          {detentions.map((detention) => <DetentionRow key={detention._id} detention={detention}/>)}
+          {detentions.map((detention) => <DetentionRow key={detention._id} selectedDetention={selectedDetention} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
         </tbody>
       </table>
     </>
