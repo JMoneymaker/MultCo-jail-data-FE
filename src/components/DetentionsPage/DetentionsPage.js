@@ -53,7 +53,7 @@ const DetentionsPage = () => {
         </select>
         <button onClick={handleClick}>Submit query</button>
       </div>
-      <table>
+      <table className={styles.tbody}>
         <tbody>
           {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
         </tbody>

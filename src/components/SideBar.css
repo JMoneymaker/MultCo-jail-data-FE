@@ -9,7 +9,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 50%;
-  padding: 10px;
+  padding-right: 15px;
+  line-height: 5rem;
   
 }
 
@@ -18,8 +19,7 @@
   padding: 0;
   width: 250px;
   float: left;
-  height: 100vh;
-  overflow: auto;
+  height: 150vh;
   font-size: 2em;
   font-family: 'Playfair Display';
   font-weight: 700;
