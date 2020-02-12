@@ -14,9 +14,7 @@ const useDetention = () => {
     }
   };
   useEffect(() => fetchDetention(detentionId), [detentionId]);
-  // console.log(detention, "Detention");
   return { detention, fetchDetention };
-}
-;
+};
 
 export default useDetention;

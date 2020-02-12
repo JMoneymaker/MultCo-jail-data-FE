@@ -10,14 +10,10 @@ const DetentionsPage = () => {
     <>
       <Header />
       <SideBar />
-\      <h1>Detentions!</h1>
+      <h1>Detentions!</h1>
     </>
   );
 
 };
 
 export default DetentionsPage;
-
-
-
-

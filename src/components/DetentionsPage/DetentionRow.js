@@ -4,7 +4,6 @@ import React from 'react';
 const DetentionRow = ({ detention, fetchSelectedDetention }) => {
   const handleClick = (id) => {
     fetchSelectedDetention(id);
-
   };
   return (
     <tr>
@@ -15,6 +14,5 @@ const DetentionRow = ({ detention, fetchSelectedDetention }) => {
     </tr>
   );
 };
-
 
 export default DetentionRow;
