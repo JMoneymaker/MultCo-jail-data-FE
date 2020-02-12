@@ -4,6 +4,7 @@ import SideBar from '../SideBar';
 import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import DetentionRow from './DetentionRow';
+import styles from './DetentionsPage.css';
 
 
 const DetentionsPage = () => {
@@ -19,8 +20,8 @@ const DetentionsPage = () => {
     <>
       <Header />
       <SideBar />
-      <h1>Test!</h1>
-      <div className="queryControls">
+      <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
+      <div className={styles.QueryControls}>
         <select onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
           <option value="Beaverton Police">Beaverton Police</option>
@@ -48,7 +49,7 @@ const DetentionsPage = () => {
         </select>
         <button onClick={handleClick}>Submit query</button>
       </div>
-      <table>
+      <table className={styles.tbody}>
         <tbody>
           {detentions.map((detention) => <DetentionRow key={detention._id} detention={detention}/>)}
         </tbody>
