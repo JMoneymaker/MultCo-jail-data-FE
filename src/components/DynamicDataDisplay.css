@@ -1,13 +1,23 @@
 .DynamicDataDisplay {
     
     background-color: rgba(145, 97, 162, 0.205);
+    border-radius: .5rem;
     text-align: center;
-    margin-bottom: 1rem;
     padding: 1rem;
 
     h2 {
         font-family: monospace;
         font-size: 1rem;
+    }
+
+    .dataSection {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        span {
+            font-size: 2rem;;
+        }
     }
 
     

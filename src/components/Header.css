@@ -10,11 +10,15 @@
 
 
 .Header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
     background-color: rgba(19, 100, 106, 0.294); 
     color: #3b3a3a;
     height: 20vh;
     padding: 45px; 
-    text-align: center; 
+    text-align: left; 
     width: 100%;
     font-size: 45px;  
     font-family: 'Playfair Display';
