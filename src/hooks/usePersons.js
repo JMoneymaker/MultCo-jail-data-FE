@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { getPersons } from '../services/getPersons';
+import { useLocation } from 'react-router-dom';
 
-const usePersons = (searchParams) => {
+const usePersons = () => {
+  const searchParams = new URLSearchParams(useLocation().search);
+  const searchParamsString = searchParams.toString();
   const [persons, setPersons] = useState([]);
 
   const fetchPersons = (params) => {
@@ -10,8 +13,10 @@ const usePersons = (searchParams) => {
         setPersons(persons);
       });
   };
-  useEffect(() => fetchPersons(searchParams), []);
-  console.log(searchParams.toString(), 'PERSONS');
+  useEffect(() => {
+    fetchPersons(searchParams);
+  }, [searchParamsString]);
+  // console.log(persons, 'PERSONS');
   return { persons };
 };
 
