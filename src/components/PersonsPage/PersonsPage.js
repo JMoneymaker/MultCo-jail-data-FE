@@ -5,6 +5,7 @@ import SideBar from '../SideBar';
 import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
+import styles from './PersonsPage.css';
 
 
 const PersonsPage = () => {
@@ -27,7 +28,7 @@ const PersonsPage = () => {
     <>
       <Header />
       <SideBar />
-      <h1>Persons!</h1>
+      <h1 className={styles.h1}>Sort Bookings By Age, Race, and Gender</h1>
       <div className="QueryControls">
         Minimum age: <input type="text" value={minAge} onChange={({ target }) => setMinAge(target.value)} />
         Maximum Age: <input type="text" value={maxAge} onChange={({ target }) => setMaxAge(target.value)} />
@@ -48,8 +49,8 @@ const PersonsPage = () => {
         </select>
         <button onClick={handleClick}>Submit query</button>
       </div>
-      <table>
-        <tbody>
+      <table className={styles.tbody}>
+        <tbody  >
           {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
         </tbody>
       </table>
