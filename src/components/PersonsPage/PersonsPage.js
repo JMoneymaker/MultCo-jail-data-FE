@@ -29,7 +29,7 @@ const PersonsPage = () => {
       <Header />
       <SideBar />
       <h1 className={styles.h1}>Sort Bookings By Age, Race, and Gender</h1>
-      <div className="QueryControls">
+      <div className={styles.QueryControls}>
         Minimum age: <input type="text" value={minAge} onChange={({ target }) => setMinAge(target.value)} />
         Maximum Age: <input type="text" value={maxAge} onChange={({ target }) => setMaxAge(target.value)} />
         <select onChange={({ target }) => setGender(target.value)}>

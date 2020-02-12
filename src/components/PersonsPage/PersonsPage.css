@@ -34,3 +34,13 @@ table tr td {
   font-family: Merriweather;
   padding-top: 20px;
 }
+
+.QueryControls{
+  font-size: 2em;
+  padding: 1em;
+
+  input {
+    height: 30px;
+    
+  }
+}
