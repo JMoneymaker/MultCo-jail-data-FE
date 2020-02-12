@@ -8,7 +8,6 @@ const PersonRow = ({ person }) => {
       <td>{person.age}</td>
       <td>{person.height}</td>
       <td>{person.weight}</td>
-      <td>Details</td>
     </tr>
   );
 };
