@@ -6,6 +6,7 @@ import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
 import DetentionDetails from './DetentionDetails';
+import styles from './DetentionsPage.css';
 
 const DetentionsPage = () => {
   const [arrestingAgency, setArrestingAgency] = useState(0);
@@ -22,7 +23,8 @@ const DetentionsPage = () => {
     <>
       <Header />
       <SideBar />
-      <div className="queryControls">
+      <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
+      <div className={styles.QueryControls}>
         Arresting Agency:
         <select onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
