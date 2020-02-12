@@ -28,10 +28,10 @@ const DetentionsByRacePreHundredThousandChart = () => {
 
   return (
     <>
-      <h1>Detentions in Multnomah County by Race Per 100,000 Population</h1>
+      <h1>Detentions Per 100,000</h1>
       <Chart
         width={'800px'}
-        height={'800px'}
+        height={'400px'}
         chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[

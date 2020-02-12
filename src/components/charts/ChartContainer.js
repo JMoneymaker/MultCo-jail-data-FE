@@ -4,11 +4,12 @@ import DetentionsByGenderChart from './DetetionsByGender';
 import PopulationByRaceChart from './PopulationByRace';
 import DetentionsByRacePreHundredThousandChart from './DetentionsByRacePerHundredThousand';
 import DetentionsByAgencyChart from './DetentionsByAgency';
+import styles from './ChartContainer.css';
 
 const Charts = () => {
 
   return (
-    <main>
+    <main className={styles.ChartContainer}>
       <PopulationByRaceChart />
       <DetentionsByRaceChart />
       <DetentionsByRacePreHundredThousandChart />

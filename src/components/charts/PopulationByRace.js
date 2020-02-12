@@ -5,10 +5,10 @@ const PopulationByRaceChart = () => {
   
   return (
     <>
-      <h1>Population in Multnomah County by Race 2017 Census Estimate</h1>
+      <h1>Multnomah County 2017 Demographic Estimates</h1>
       <Chart
         width={'800px'}
-        height={'800px'}
+        height={'600px'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[

@@ -30,10 +30,10 @@ const DetentionsByRaceChart = () => {
 
   return (
     <>
-      <h1>Detentions in Multnomah County by Race</h1>
+      <h1>Detentions by Race</h1>
       <Chart
         width={'800px'}
-        height={'800px'}
+        height={'600px'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
