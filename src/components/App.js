@@ -1,12 +1,12 @@
 import React from 'react';
-import { 
+import {
   BrowserRouter as Router,
   Route,
   // Switch
 } from 'react-router-dom';
 import HomePage from './HomePage';
 import PersonsPage from './PersonsPage/PersonsPage';
-import DetentionsPage from './DetentionsPage';
+import DetentionsPage from './DetentionsPage/DetentionsPage';
 import DeveloperPage from './DeveloperPage';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
     </Router>
   );
 }
-  
+
 
 
 

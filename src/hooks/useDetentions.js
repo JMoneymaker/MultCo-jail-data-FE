@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { getDetentions } from '../services/getDetentions';
+import { useLocation } from 'react-router-dom';
 
-const useDetentions = (searchParams) => {
+const useDetentions = () => {
+  const searchParams = new URLSearchParams(useLocation().search);
+  const searchParamsString = searchParams.toString();
   const [detentions, setDetentions] = useState([]);
 
   const fetchDetentions = (params) => {
@@ -10,7 +13,7 @@ const useDetentions = (searchParams) => {
         setDetentions(detentions);
       });
   };
-  useEffect(() => fetchDetentions(searchParams), []);
+  useEffect(() => fetchDetentions(searchParams), [searchParamsString]);
   return { detentions };
 };
 

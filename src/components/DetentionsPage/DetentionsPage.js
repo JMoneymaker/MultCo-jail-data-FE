@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
 import Header from '../Header';
 import SideBar from '../SideBar';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import DetentionRow from './DetentionRow';
 
 
 const DetentionsPage = () => {
-  let searchParams = new URLSearchParams(useLocation().search);
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
-  const { detentions } = useDetentions(searchParams);
+  const { detentions } = useDetentions();
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
-    newSearchParams.set('arrestingAgency', arrestingAgency);
+    arrestingAgency && newSearchParams.set('arrestingAgency', arrestingAgency);
     history.push(`/detentions?${newSearchParams}`);
   };
   return (
     <>
       <Header />
       <SideBar />
-      <h1>Detentions!</h1>
+      <h1>Test!</h1>
       <div className="queryControls">
         <select onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>

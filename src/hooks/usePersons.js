@@ -16,7 +16,6 @@ const usePersons = () => {
   useEffect(() => {
     fetchPersons(searchParams);
   }, [searchParamsString]);
-  // console.log(persons, 'PERSONS');
   return { persons };
 };
 
