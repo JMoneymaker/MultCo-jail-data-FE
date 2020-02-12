@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 
+
 const PersonsPage = () => {
   const [minAge, setMinAge] = useState(0);
   const [maxAge, setMaxAge] = useState(Infinity);
