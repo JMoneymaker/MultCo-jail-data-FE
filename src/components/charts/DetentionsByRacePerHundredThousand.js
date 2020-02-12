@@ -35,7 +35,7 @@ const DetentionsByRacePreHundredThousandChart = () => {
         chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[
-          ['Race', 'Arrests'],
+          ['Race', ''],
           ['Black', blackCount / 56569 * 100000],
           ['Native American', nativeAmericanCount / 8515 * 100000],
           ['Hispanic', hispanicCount / 88966 * 100000],
