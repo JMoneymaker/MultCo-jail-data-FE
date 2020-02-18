@@ -42,7 +42,6 @@ const DetentionsByRacePreHundredThousandChart = () => {
           ['White', whiteCount / 652045 * 100000],
           ['Pacific', pacificCount / 8515 * 100000],
           ['Asian', asianCount / 72700 * 100000],
-
         ]}
         options={{
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],

@@ -45,7 +45,6 @@ const DetentionsByRaceChart = () => {
           ['Asian', asianCount],
           ['White', whiteCount],
           ['Native American', nativeAmericanCount],
-
         ]}
         options={{
           is3D: true,

@@ -19,7 +19,6 @@ const PopulationByRaceChart = () => {
           ['Asian', 72700],
           ['White', 652045],
           ['Native American', 8515],
-
         ]}
         options={{
           is3D: true,

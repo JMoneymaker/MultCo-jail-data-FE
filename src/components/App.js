@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  // Switch
+  Route
 } from 'react-router-dom';
 import HomePage from './HomePage';
 import PersonsPage from './PersonsPage/PersonsPage';
@@ -19,7 +18,3 @@ export default function App() {
     </Router>
   );
 }
-
-
-
-
