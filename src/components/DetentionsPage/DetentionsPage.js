@@ -5,14 +5,17 @@ import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
-import DetentionDetails from './DetentionDetails';
+// import DetentionDetails from './DetentionDetails';
 import styles from './DetentionsPage.css';
+import DetailsModal from './DetailsModal';
+import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
   const { detentions } = useDetentions();
   const { detention: selectedDetention, fetchDetention: fetchSelectedDetention } = useDetention();
+  const { showDetailsModal, toggleDetailsModal } = useDetailsModal();
 
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
@@ -55,10 +58,10 @@ const DetentionsPage = () => {
       </div>
       <table className={styles.tbody}>
         <tbody>
-          {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
+          {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention} toggleDetailsModal={toggleDetailsModal}/>)}
         </tbody>
       </table>
-      <DetentionDetails detention={selectedDetention} />
+      <DetailsModal detention={selectedDetention} showDetailsModal={showDetailsModal} toggleDetailsModal={toggleDetailsModal} />
     </>
   );
 
