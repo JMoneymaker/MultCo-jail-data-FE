@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import Header from './Header';
-import SideBar from './SideBar';
+import Header from './common/Header';
+import SideBar from './common/SideBar';
 import styles from './DeveloperPage.css';
 
 
