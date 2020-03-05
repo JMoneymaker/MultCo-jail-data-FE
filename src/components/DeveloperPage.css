@@ -22,6 +22,8 @@ table tr td {
     border: 1px solid black;
     font-family: Merriweather;
     padding-top: 20px;
+    width: 805;
+    margin: auto;
 }
 
 .routes {

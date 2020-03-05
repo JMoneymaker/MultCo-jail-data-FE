@@ -85,7 +85,3 @@ const DeveloperPage = () => {
 };
 
 export default DeveloperPage;
-
-
-
-

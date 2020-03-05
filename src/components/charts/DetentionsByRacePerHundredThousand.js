@@ -35,17 +35,17 @@ const DetentionsByRacePreHundredThousandChart = () => {
         chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[
-          ['Race', 'Arrests'],
+          ['Race', ''],
           ['Black', blackCount / 56569 * 100000],
           ['Native American', nativeAmericanCount / 8515 * 100000],
           ['Hispanic', hispanicCount / 88966 * 100000],
           ['White', whiteCount / 652045 * 100000],
           ['Pacific', pacificCount / 8515 * 100000],
           ['Asian', asianCount / 72700 * 100000],
-
         ]}
         options={{
-          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A']
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],
+          legend: { position: 'none' }
         }}
       />
     </>
