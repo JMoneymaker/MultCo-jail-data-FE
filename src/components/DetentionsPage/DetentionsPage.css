@@ -6,9 +6,10 @@
 
 
 .pageBody {
-  font-size: 30px; 
+  font-size: 30px;
   margin-left: 250px;
   font-family: 'Playfair Display';
+  padding-top: 20vh;
 }
 
 .h1 {
@@ -22,7 +23,6 @@
   width: 60%;
   text-align: left;
   margin: auto;
-
 }
 
 td {
@@ -46,6 +46,5 @@ table tr td {
 
   input {
     height: 30px;
-    
   }
 }
