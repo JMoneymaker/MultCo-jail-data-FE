@@ -6,12 +6,17 @@
 
 
 .pageBody {
-  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .h1 {
   text-align: center;
-  padding: 1em;
+  text-align: center;
+  padding-top: 2vh;
+  padding-right: 2vh;
 }
 
 .tbody {
@@ -33,9 +38,9 @@ table tr td {
 
 .QueryControls{
   padding: 1em;
-  width: 80%;
+  width: 90%;
   text-align: center;
-  margin-left: 17%;
+  margin-left: 5%;
   font-size: 1.5em;
 
 

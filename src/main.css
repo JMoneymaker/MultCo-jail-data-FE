@@ -6,6 +6,7 @@
 html {
     font-family: 'Playfair Display', serif;
 
+
     h5 {
         font-size: 2em;
     }
@@ -48,6 +49,32 @@ html {
        a:hover {
            text-decoration: underline;
            color: black;
+       }
+
+       select {
+           height: 2.5vh;
+       }
+
+       button {
+           height: 3vh;
+           width: 6vw;
+           font-size: 1.5em;
+           font-family: 'Playfair Display', serif;
+           text-align: center;
+           margin-left: 45%;
+           margin-bottom: 2vh;
+           padding-bottom: 3vh;
+           border-radius: 5%;
+       }
+
+       button:hover {
+        border: 1px solid black;
+       }
+
+       button:active {
+        border: 2px solid rgb(85, 83, 83);
+        background-color: rgb(228, 225, 225);
+        color: rgb(85, 83, 83)
        }
 
     .QueryControls{
