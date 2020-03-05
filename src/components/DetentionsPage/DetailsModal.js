@@ -9,28 +9,37 @@ const DetailsModal = ({ detention, showDetailsModal, toggleDetailsModal }) => {
         <div className={`${styles.DetailsModal} ${showDetailsModal ? styles.modalShow : styles.modalHide}`}>
           <div>
             <button className={styles.closeButton} type='button' onClick={toggleDetailsModal}>&times;</button>
-            <ul>
-              <li>Booking Number: {detention.bookingNumber}</li>
-              <li>Booking Date: {detention.bookingDate}</li>
-              <li>Arresting Agency: {detention.arrestingAgency}</li>
-              <li>Gender: {detention.person.gender}</li>
-              <li>Race: {detention.person.race}</li>
-              <li>Age: {detention.person.age}</li>
-              <li>Height: {detention.person.height}</li>
-              <li>Weight: {detention.person.weight}</li>
-              <li>Assigned Facility: {detention.currentBookingState.assignedFacility}</li>
-              <li>Projected Release Date: {detention.currentBookingState.projectedReleaseDate}</li>
-              <li>Release Date: {detention.releaseDate}</li>
-              <li>Charges: {detention.currentCaseState && detention.currentCaseState.charges.map((charge) => {
+            <div className={styles.categoryDetails}>
+              <h3>Demographic info:</h3>
+              <ul>
+                <li><span className={styles.key}>Gender: </span>{detention.person.gender}</li>
+                <li><span className={styles.key}>Race: </span>{detention.person.race}</li>
+                <li><span className={styles.key}>Age: </span>{detention.person.age}</li>
+                <li><span className={styles.key}>Height: </span>{detention.person.height}</li>
+                <li><span className={styles.key}>Weight: </span>{detention.person.weight}</li>
+              </ul>
+            </div>
+            <div className={styles.categoryDetails}>
+              <h3>Booking info:</h3>
+              <ul>
+                <li><span className={styles.key}>Booking Number: </span>{detention.bookingNumber}</li>
+                <li><span className={styles.key}>Booking Date: </span>{detention.bookingDate.slice(0, 10)}</li>
+                <li><span className={styles.key}>Release Date: </span>{detention.releaseDate.slice(0, 10)}</li>
+                <li><span className={styles.key}>Arresting Agency: </span>{detention.arrestingAgency}</li>
+                <li><span className={styles.key}>Assigned Facility: </span>{detention.currentBookingState.assignedFacility}</li>
+              </ul>
+            </div>
+            <div className={styles.categoryDetails}>
+              <h3>Charges:</h3>
+              {detention.currentCaseState && detention.currentCaseState.charges.map((charge) => {
                 return (
                   <ul key={charge._id}>
                     <li>{charge.description}</li>
-                    <li>Bail: ${charge.bail}</li>
-                    <li>Status: {charge.status}</li>
+                    <li><span className={styles.key}>Bail: </span>${charge.bail}</li>
+                    <li><span className={styles.key}>Status: </span>{charge.status}</li>
                   </ul>);})
               }
-              </li>
-            </ul>
+            </div>
           </div>
         </div>
       </section>

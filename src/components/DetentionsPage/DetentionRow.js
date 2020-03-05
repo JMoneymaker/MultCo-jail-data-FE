@@ -11,11 +11,11 @@ const DetentionRow = ({ detention, fetchSelectedDetention, toggleDetailsModal })
   return (
     <tr>
       <td>{detention.bookingNumber}</td>
-      <td>{detention.bookingDate}</td>
+      <td>{detention.bookingDate.slice(0, 10)}</td>
       <td>{detention.arrestingAgency}</td>
-      <td onClick={() => {
+      <td> <button onClick={() => {
         handleClick(detention._id);
-      }}>details</td>
+      }}>Details</button></td>
     </tr>
   );
 };
