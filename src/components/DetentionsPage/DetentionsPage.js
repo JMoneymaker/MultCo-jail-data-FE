@@ -6,10 +6,8 @@ import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
 import Paging from '../Paging/Paging';
-
-import DetentionDetails from './DetentionDetails';
-import styles from './DetentionsPage.css';
 import DetailsModal from './DetailsModal';
+import styles from './DetentionsPage.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
@@ -65,7 +63,7 @@ const DetentionsPage = () => {
           </tbody>
         </table>
         <Paging />
-        <DetentionDetails detention={selectedDetention} />
+        <DetailsModal detention={selectedDetention} showDetailsModal={showDetailsModal} toggleDetailsModal={toggleDetailsModal} />
       </main>
     </>
   );
