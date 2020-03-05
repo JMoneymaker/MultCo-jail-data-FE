@@ -1,9 +1,8 @@
 .ChartContainer {
     display: flex;
     flex-direction: column;
-    height: 80vh;
     width: 65vw;
     margin: auto;
-    margin-top: 2rem;
-    overflow: scroll;
+    margin-top: 20vh;
+    padding-top: 5vh;
 };
