@@ -6,16 +6,10 @@
 
 
 .pageBody {
-<<<<<<< HEAD
   font-size: 30px;
   margin-left: 250px;
   font-family: 'Playfair Display';
   padding-top: 20vh;
-=======
-  font-size: 30px; 
-  margin-left: 250px;
-  font-family: 'Playfair Display';
->>>>>>> da229e8519afeeba93dd84e0d0e18ee3669f7d4a
 }
 
 .h1 {
@@ -29,10 +23,6 @@
   width: 60%;
   text-align: left;
   margin: auto;
-<<<<<<< HEAD
-=======
-
->>>>>>> da229e8519afeeba93dd84e0d0e18ee3669f7d4a
 }
 
 td {
@@ -56,10 +46,5 @@ table tr td {
 
   input {
     height: 30px;
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> da229e8519afeeba93dd84e0d0e18ee3669f7d4a
   }
 }
