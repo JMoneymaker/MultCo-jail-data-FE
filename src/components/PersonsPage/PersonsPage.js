@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
+import Paging from '../Paging/Paging';
 
 
 const PersonsPage = () => {
@@ -27,12 +28,12 @@ const PersonsPage = () => {
     <>
       <Header />
       <SideBar />
-      <div className={styles.pageBody}>
-        <h1 className={styles.h1}>Sort all Bookings By Age, Race, and Gender</h1>
+      <main className={styles.pageBody}>
+        <h1 className={styles.h1}>Sort Bookings By Age, Race, and Gender</h1>
         <div className={styles.QueryControls}>
         Minimum age: <input type="text" value={minAge} onChange={({ target }) => setMinAge(target.value)} />
         Maximum Age: <input type="text" value={maxAge} onChange={({ target }) => setMaxAge(target.value)} />
-        Gender: <select onChange={({ target }) => setGender(target.value)}>
+          <select onChange={({ target }) => setGender(target.value)}>
             <option value="">Any</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -49,12 +50,13 @@ const PersonsPage = () => {
           </select>
         </div>
         <button onClick={handleClick}>Search</button>
-      </div>
-      <table className={styles.tbody}>
-        <tbody  >
-          {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
-        </tbody>
-      </table>
+        <table className={styles.tbody}>
+          <tbody  >
+            {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
+          </tbody>
+        </table>
+        <Paging />
+      </main>
     </>
   );
 

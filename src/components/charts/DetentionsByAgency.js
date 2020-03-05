@@ -23,10 +23,10 @@ const DetentionsByAgencyChart = () => {
  
   return (
     <>
-      <h1>Detentions in Multnomah County by Agency</h1>
+      <h1>Detentions in Multnomah County by Agency</h1><br/>
       <Chart
         width={'800px'}
-        height={'800px'}
+        height={'400px'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={ [titles, ...dataPoints] }

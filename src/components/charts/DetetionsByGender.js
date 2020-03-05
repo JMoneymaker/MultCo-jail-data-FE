@@ -17,10 +17,10 @@ const DetentionsByGenderChart = () => {
 
   return (
     <>
-      <h1>Detentions by Gender</h1>
+      <h1>Detentions by Gender in Multnomah County</h1><br/>
       <Chart
         width={'800px'}
-        height={'600px'}
+        height={'400px'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[

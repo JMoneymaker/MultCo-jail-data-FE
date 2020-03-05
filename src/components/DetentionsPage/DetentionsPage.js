@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
+import Paging from '../Paging/Paging';
+
 import DetentionDetails from './DetentionDetails';
 import styles from './DetentionsPage.css';
 
@@ -23,10 +25,11 @@ const DetentionsPage = () => {
     <>
       <Header />
       <SideBar />
-      <div className={styles.pageBody}>
+      <main className={styles.pageBody}>
         <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
         <div className={styles.QueryControls}>
-        Arresting Agency: <select onChange={({ target }) => setArrestingAgency(target.value)}>
+        Arresting Agency:
+          <select onChange={({ target }) => setArrestingAgency(target.value)}>
             <option value="">Any</option>
             <option value="Beaverton Police">Beaverton Police</option>
             <option value="Multnomah County Sheriff Booking">Multnomah County Sheriff Booking</option>
@@ -53,13 +56,14 @@ const DetentionsPage = () => {
           </select>
         </div>
         <button onClick={handleClick}>Search</button>
-      </div>
-      <table className={styles.tbody}>
-        <tbody>
-          {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
-        </tbody>
-      </table>
-      <DetentionDetails detention={selectedDetention} />
+        <table className={styles.tbody}>
+          <tbody>
+            {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
+          </tbody>
+        </table>
+        <Paging />
+        <DetentionDetails detention={selectedDetention} />
+      </main>
     </>
   );
 

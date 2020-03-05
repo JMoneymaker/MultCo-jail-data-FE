@@ -4,20 +4,22 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 50%;
+  padding: 10px;
   padding-right: 15px;
   line-height: 5rem;
 }
 
 .SideBar {
+  position: fixed;
+  margin-top: 20vh;
   margin: 0;
-  padding: 0;
+  padding-top: 20vh;
   width: 250px;
   float: left;
   height: 150vh;
   font-size: 2em;
   font-weight: 700;
   background-color: rgba(86, 128, 154, 0.438);
-
 }
 
 
@@ -54,4 +56,6 @@
   text-decoration: none;
 }
 
-
+.active {
+  text-decoration: underline;
+}

@@ -10,11 +10,11 @@ const Charts = () => {
 
   return (
     <main className={styles.ChartContainer}>
-      <PopulationByRaceChart />
-      <DetentionsByRaceChart />
-      <DetentionsByRacePreHundredThousandChart />
-      <DetentionsByGenderChart />
-      <DetentionsByAgencyChart />
+      <PopulationByRaceChart /><br/>
+      <DetentionsByRaceChart /><br/>
+      <DetentionsByRacePreHundredThousandChart /><br/>
+      <DetentionsByGenderChart /><br/>
+      <DetentionsByAgencyChart /><br/>
     </main>
   );
 };
