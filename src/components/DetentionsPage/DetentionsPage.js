@@ -4,10 +4,8 @@ import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
 import Paging from '../common/Paging/Paging';
-
-import DetentionDetails from './DetentionDetails';
-import styles from './DetentionsPage.css';
 import DetailsModal from './DetailsModal';
+import styles from './DetentionsPage.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
@@ -50,7 +48,7 @@ const DetentionsPage = () => {
           <option value="Community Corrections">Community Corrections</option>
           <option value="Tri-Met Police">Tri-Met Police</option>
           <option value="Drug Enforcement Administration">Drug Enforcement Administration</option>
-          <option value="Gresham Police Department">Gresham Police Departmen</option>
+          <option value="Gresham Police Department">Gresham Police Department</option>
         </select>
         <button onClick={handleClick}>Submit query</button>
       </div>
@@ -60,7 +58,7 @@ const DetentionsPage = () => {
         </tbody>
       </table>
       <Paging />
-      <DetentionDetails detention={selectedDetention} />
+      <DetailsModal detention={selectedDetention} showDetailsModal={showDetailsModal} toggleDetailsModal={toggleDetailsModal} />
     </main>
   );
 
