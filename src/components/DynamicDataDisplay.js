@@ -15,9 +15,9 @@ const DynamicDataDisplay = ({ children, hook }) => {
     </div>
   );
   return (
-    
+
     <div className={styles.DynamicDataDisplay}>
-      <h2>{children}</h2>
+      <h3>{children}</h3>
       <div className={styles.dataSection}>
         <p>{data.toFixed(1)}
           <span> Days</span>

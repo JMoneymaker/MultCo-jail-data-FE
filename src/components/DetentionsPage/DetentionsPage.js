@@ -55,8 +55,8 @@ const DetentionsPage = () => {
             <option value="Drug Enforcement Administration">Drug Enforcement Administration</option>
             <option value="Gresham Police Department">Gresham Police Departmen</option>
           </select>
-          <button onClick={handleClick}>Submit query</button>
         </div>
+        <button onClick={handleClick}>Search</button>
         <table className={styles.tbody}>
           <tbody>
             {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention} toggleDetailsModal={toggleDetailsModal}/>)}
