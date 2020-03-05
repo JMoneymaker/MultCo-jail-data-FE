@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
 import { getDetention } from '../services/getDetentions';
 
-const useDetention = (id) => {
+const useDetention = () => {
   const [detention, setDetention] = useState();
+  const detentionId = detention && detention._id;
 
   const fetchDetention = (id) => {
-    console.log(id, 'id');
-    getDetention(id)
-      .then(detention => {
-        setDetention(detention);
-      });
+    if(id) {
+      getDetention(id)
+        .then(detention => {
+          setDetention(detention);
+        });
+    }
   };
-  useEffect((id) => fetchDetention(id), []);
-  // console.log(detention, "Detention");
+  useEffect(() => fetchDetention(detentionId), [detentionId]);
   return { detention, fetchDetention };
-}
-;
+};
 
 export default useDetention;

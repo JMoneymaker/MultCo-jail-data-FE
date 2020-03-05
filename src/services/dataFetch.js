@@ -4,7 +4,6 @@ export const getAvgDetention = () => {
     .then(res => {
       return res[0].avgDifference / 86400000; 
     });
-
 };
 
 export const getDetentionsYearToDate = () => {
