@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
-import Paging from '../Paging/Paging';
+import Paging from '../common/Paging/Paging';
 
 import DetentionDetails from './DetentionDetails';
 import styles from './DetentionsPage.css';

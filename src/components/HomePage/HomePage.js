@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HomePage.css';
-import Charts from './charts/ChartContainer';
+import Charts from '../charts/ChartContainer';
 
 const HomePage = () => {
 

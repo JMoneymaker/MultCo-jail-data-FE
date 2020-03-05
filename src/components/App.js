@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import HomePage from './HomePage';
+import HomePage from './HomePage/HomePage';
 import PersonsPage from './PersonsPage/PersonsPage';
 import DetentionsPage from './DetentionsPage/DetentionsPage';
-import DeveloperPage from './DeveloperPage';
+import DeveloperPage from './DeveloperPage/DeveloperPage';
 import Header from './common/Header';
 import SideBar from './common/SideBar';
 

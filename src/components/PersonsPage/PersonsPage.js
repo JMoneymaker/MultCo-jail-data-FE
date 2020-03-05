@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
-import Paging from '../Paging/Paging';
+import Paging from '../common/Paging/Paging';
 
 
 const PersonsPage = () => {
