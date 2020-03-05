@@ -9,12 +9,15 @@ import Paging from '../Paging/Paging';
 
 import DetentionDetails from './DetentionDetails';
 import styles from './DetentionsPage.css';
+import DetailsModal from './DetailsModal';
+import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
   const { detentions } = useDetentions();
   const { detention: selectedDetention, fetchDetention: fetchSelectedDetention } = useDetention();
+  const { showDetailsModal, toggleDetailsModal } = useDetailsModal();
 
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
