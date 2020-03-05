@@ -11,11 +11,11 @@ import styles from './DetentionsPage.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
+  const { toggleDetailsModal, showDetailsModal } = useDetailsModal();
   const [arrestingAgency, setArrestingAgency] = useState(0);
   const history = useHistory();
   const { detentions } = useDetentions();
   const { detention: selectedDetention, fetchDetention: fetchSelectedDetention } = useDetention();
-  const { showDetailsModal, toggleDetailsModal } = useDetailsModal();
 
   const handleClick = () => {
     const newSearchParams = new URLSearchParams();
@@ -59,7 +59,7 @@ const DetentionsPage = () => {
         </div>
         <table className={styles.tbody}>
           <tbody>
-            {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
+            {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention} toggleDetailsModal={toggleDetailsModal}/>)}
           </tbody>
         </table>
         <Paging />
