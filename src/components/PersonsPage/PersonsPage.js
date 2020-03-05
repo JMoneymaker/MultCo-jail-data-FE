@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
+import Paging from '../Paging/Paging';
 
 
 const PersonsPage = () => {
@@ -54,6 +55,7 @@ const PersonsPage = () => {
             {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
           </tbody>
         </table>
+        <Paging />
       </main>
     </>
   );
