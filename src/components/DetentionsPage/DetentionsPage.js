@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import useDetentions from '../../hooks/useDetentions';
 import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
+import Paging from '../Paging/Paging';
 
 
 const DetentionsPage = () => {
@@ -56,6 +57,7 @@ const DetentionsPage = () => {
           {detentions.map((detention) => <DetentionRow key={detention._id} selectedDetention={selectedDetention} fetchSelectedDetention={fetchSelectedDetention} detention={detention}/>)}
         </tbody>
       </table>
+      <Paging />
     </>
   );
 
