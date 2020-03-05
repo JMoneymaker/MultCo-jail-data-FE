@@ -14,20 +14,19 @@ const DeveloperPage = () => {
       <main className={styles.DeveloperPage}>
         <div className={styles.contentContainer}>
           <div className={styles.routes}>
-            <h2>About the API</h2>
+            <h1>About the API</h1>
             <p>The data in this API was collected from the Multnomah County Detention Center <a href="http://www.mcso.us/PAID/">inmate information page.</a></p>
-                  
+            <br/>
             <p><span className={styles.queryInfo}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
             <ul>
-              <h3>Person Routes</h3>
+              <h2>Person Routes</h2>
               <li>
-                <span className={styles.routes}>Get ALL persons - 
-                </span><a className="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/persons</a>
+                <span className={styles.routes}>Get ALL persons -
+                </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/persons</a>
               </li>
               <li>
-                <span className={styles.routes}>Query person subsets by keys - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?race=White" target="_blank">/?race=White</a> or <a className="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?gender=Male" target="_blank">/?gender=Male</a>
+                <span className={styles.routes}>Query person subsets by keys - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?race=White" target="_blank">/?race=White</a> or <a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?gender=Male" target="_blank">/?gender=Male</a>
               </li>
-            
               <li>
                 <span className={styles.routes}>Get count by RACE - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace" target="_blank">/countByRace</a>
               </li>
@@ -38,7 +37,7 @@ const DeveloperPage = () => {
                 <span className={styles.routes}>Get count by AGE - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange" target="_blank">/countByAgeRange</a>
               </li>
 
-              <h3>Detention Routes</h3>
+              <h2>Detention Routes</h2>
               <li>
                 <span className={styles.routes}>Get ALL detentions - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</a>
               </li>
@@ -78,8 +77,8 @@ const DeveloperPage = () => {
           </div>
         </div>
       </main>
-    </>       
-            
+    </>
+
   );
 
 };

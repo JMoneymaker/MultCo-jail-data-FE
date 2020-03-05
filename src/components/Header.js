@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <section className={styles.Header}>
-      <h1>MultCo Jail Data</h1>
+      <h4>MultCo Jail Data</h4>
       <div>
         <DynamicDataDisplay hook={useAverageDetention}>Average Length of Stay</DynamicDataDisplay>
       </div>

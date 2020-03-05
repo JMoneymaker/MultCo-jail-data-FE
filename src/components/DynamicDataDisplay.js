@@ -6,9 +6,9 @@ import styles from './DynamicDataDisplay.css';
 const DynamicDataDisplay = ({ children, hook }) => {
   const { data } = hook();
   return (
-    
+
     <div className={styles.DynamicDataDisplay}>
-      <h2>{children}</h2>
+      <h3>{children}</h3>
       <div className={styles.dataSection}>
         <p>{data.toFixed(1)}</p>
         <span>Days</span>
