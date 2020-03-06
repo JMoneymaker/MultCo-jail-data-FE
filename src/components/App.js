@@ -13,9 +13,9 @@ import SideBar from './common/SideBar';
 export default function App() {
   return (
     <>
-      <Header />
-      <SideBar />
       <Router>
+        <Header />
+        <SideBar />
         <Route exact path='/' component={HomePage} />
         <Route path='/persons' component={PersonsPage} />
         <Route path='/detentions' component={DetentionsPage} />
