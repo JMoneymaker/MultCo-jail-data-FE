@@ -2,9 +2,9 @@
 
 exports[`App component renders App 1`] = `
 <Fragment>
-  <Header />
-  <SideBar />
   <BrowserRouter>
+    <Header />
+    <SideBar />
     <Route
       component={[Function]}
       exact={true}
