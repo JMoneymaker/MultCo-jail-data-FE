@@ -6,17 +6,17 @@
 
 
 .pageBody {
-  font-size: 30px;
-  margin-left: 250px;
-  font-family: 'Playfair Display';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   padding-top: 20vh;
 }
 
 .h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4vh;
   text-align: center;
-  padding: 1em;
+  padding-top: 2vh;
+  padding-right: 2vh;
 }
 
 .tbody {
@@ -29,19 +29,12 @@ td {
   padding: 22em;
 }
 
-table tr td {
-  border: 1px solid black;
-  padding: 15px;
-  font-family: Merriweather;
-  padding-top: 20px;
-}
-
 .QueryControls{
-  font-size: 2em;
   padding: 1em;
-  width: 80%;
+  width: 90%;
   text-align: center;
-  margin-left: 17%;
+  margin-left: 5%;
+  font-size: 1.5em;
 
 
   input {
