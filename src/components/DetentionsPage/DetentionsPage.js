@@ -7,7 +7,7 @@ import Paging from '../common/Paging/Paging';
 import DetailsModal from './DetailsModal';
 import styles from './DetentionsPage.css';
 import tableStyles from '../common/tableStyles.css';
-import formStyles from '../common/Form.css'
+import formStyles from '../common/Form.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
