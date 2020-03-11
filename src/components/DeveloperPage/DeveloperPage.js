@@ -14,9 +14,13 @@ const DeveloperPage = () => {
       <main className={styles.DeveloperPage}>
         <div className={styles.contentContainer}>
           <div className={styles.routes}>
-            <h1>About the API</h1>
-            <p>The data in this API was collected from the Multnomah County Detention Center <a href="http://www.mcso.us/PAID/">inmate information page.</a></p>
-            <br/>
+            <h1>About MCDC Data</h1>
+            <p>MCDC data is a public resource for information regarding detentions in Multnomah County, Oregon.  The data is collected daily from the Multnomah County Detention Center <a href="http://www.mcso.us/PAID/">inmate information page.</a></p><br/>
+
+            <p>The visualizations on the home page are updated daily and intended to show Multnomah County’s tendency to follow the national trend of disproportionately detaining Black, Native American, and Hispanic people as compared to other groups.</p><br/>
+
+            <p> The API routes below provide direct access to the data for researchers.</p><br/>
+
             <p><span className={styles.queryInfo}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
             <ul>
               <h2>Person Routes</h2>
@@ -71,16 +75,15 @@ const DeveloperPage = () => {
               <li>
                 <span className={styles.routes}>Get ALL court cases - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/courtCases" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/courtCases</a>
               </li>
-            </ul>
+            </ul><br/>
+            <p>This project developed and maintained by <a href="https://github.com/munizao" target="_blank" rel="noopener noreferrer">Ali Muniz</a>, <a href="https://github.com/JMoneymaker" target="_blank" rel="noopener noreferrer">Jamin Moneymaker</a>,  <a href="https://github.com/avnit77" target="_blank" rel="noopener noreferrer">Tali Avni</a>, and <a href="https://github.com/AaronMullan" target="_blank" rel="noopener noreferrer">Aaron Mullan</a>.  <a href="https://github.com/NickBrimmer" target="_blank" rel="noopener noreferrer">Nick Brimmer</a> also contributed to initial development.</p>
           </div>
           <div className="about">
           </div>
         </div>
       </main>
     </>
-
   );
-
 };
 
 export default DeveloperPage;
