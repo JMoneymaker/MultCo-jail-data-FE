@@ -53,6 +53,14 @@ const DetentionsPage = () => {
       </div>
       <button onClick={handleClick}>Search</button>
       <table className={styles.tbody}>
+        <thead>
+          <tr>
+            <th>Booking Number</th>
+            <th>Booking Date</th>
+            <th>Arresting Agency</th>
+            <th>Booking Details</th>
+          </tr>
+        </thead>
         <tbody>
           {detentions.map((detention) => <DetentionRow key={detention._id} fetchSelectedDetention={fetchSelectedDetention} detention={detention} toggleDetailsModal={toggleDetailsModal}/>)}
         </tbody>
