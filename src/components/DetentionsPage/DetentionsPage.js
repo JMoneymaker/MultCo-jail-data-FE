@@ -74,7 +74,3 @@ const DetentionsPage = () => {
 };
 
 export default DetentionsPage;
-
-
-
-
