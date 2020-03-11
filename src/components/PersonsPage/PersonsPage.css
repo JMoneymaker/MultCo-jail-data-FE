@@ -6,33 +6,3 @@
   align-content: center;
   padding-top: 20vh;
 }
-
-.h1 {
-  text-align: center;
-  padding-top: 2vh;
-  padding-right: 2vh;
-}
-
-.tbody {
-  width: 60%;
-  text-align: left;
-  margin: auto;
-
-}
-
-td {
-  padding: 22em;
-}
-
-.QueryControls{
-  padding: 1em;
-  width: 90%;
-  text-align: center;
-  margin-left: 5%;
-  font-size: 1.5em;
-
-
-  input {
-    height: 30px;
-  }
-}
