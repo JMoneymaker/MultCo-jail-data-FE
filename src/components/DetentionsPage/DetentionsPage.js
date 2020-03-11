@@ -6,8 +6,8 @@ import DetentionRow from './DetentionRow';
 import Paging from '../common/Paging/Paging';
 import DetailsModal from './DetailsModal';
 import styles from './DetentionsPage.css';
-import tableStyles from '../common/tableStyles.css';
-import formStyles from '../common/Form.css'
+import tableStyles from '../common/Table.css';
+import formStyles from '../common/Form.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
@@ -24,7 +24,7 @@ const DetentionsPage = () => {
   };
   return (
     <main className={styles.pageBody}>
-      <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
+      <h1>Search all Detentions by Arresting Agency</h1>
       <div className={formStyles.QueryControls}>
         Arresting Agency:
         <select className={formStyles.dropdown} onChange={({ target }) => setArrestingAgency(target.value)}>
@@ -54,7 +54,7 @@ const DetentionsPage = () => {
         </select>
       </div>
       <button onClick={handleClick}>Search</button>
-      <table className={tableStyles.table}>
+      <table className={tableStyles.Table}>
         <thead>
           <tr>
             <th><h4>Booking Number</h4></th>
