@@ -1,11 +1,9 @@
 .DeveloperPage {
-
- .contentContainer {
-     width: 65vw;
      margin: auto;
-     padding-left: 2rem;
+     padding-left: 2vw;
      padding-top: 20vh;
-}
+     padding-bottom: 5vh;
+     margin-left: 250px;
 
 .queryInfo {
     padding-top: 2.5rem;
