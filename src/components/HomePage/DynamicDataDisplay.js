@@ -6,9 +6,9 @@ import styles from './DynamicDataDisplay.css';
 const DynamicDataDisplay = ({ children, hook }) => {
   const { data } = hook();
   if(data === 0) return (
-    
+
     <div className={styles.DynamicDataDisplay}>
-      <h2>{children}</h2>
+      <h3>{children}</h3>
       <div className={styles.dataSection}>
         <p>Loading</p>
       </div>

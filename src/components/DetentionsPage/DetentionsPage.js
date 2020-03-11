@@ -25,7 +25,7 @@ const DetentionsPage = () => {
       <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
       <div className={styles.QueryControls}>
         Arresting Agency:
-        <select onChange={({ target }) => setArrestingAgency(target.value)}>
+        <select className={styles.dropdown} onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
           <option value="Beaverton Police">Beaverton Police</option>
           <option value="Multnomah County Sheriff Booking">Multnomah County Sheriff Booking</option>

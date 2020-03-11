@@ -57,14 +57,14 @@ html {
 
        button {
            height: 3vh;
-           width: 6vw;
            font-size: 1.5em;
            font-family: 'Playfair Display', serif;
            text-align: center;
            margin-left: 45%;
            margin-bottom: 2vh;
-           padding-bottom: 3vh;
+           padding-bottom: 4vh;
            border-radius: 5%;
+           width: fit-content;
        }
 
        button:hover {
