@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DetentionDetails = ({ detention }) => {
   if(detention) {
@@ -30,5 +31,8 @@ const DetentionDetails = ({ detention }) => {
   else return null;
 };
 
+DetentionDetails.propTypes = {
+  detention: PropTypes.object.isRequired
+};
 
 export default DetentionDetails;
