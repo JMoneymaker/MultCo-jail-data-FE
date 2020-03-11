@@ -51,10 +51,6 @@ html {
            color: black;
        }
 
-       select {
-           height: 2.5vh;
-       }
-
        button {
            height: 3vh;
            font-size: 1.5em;
