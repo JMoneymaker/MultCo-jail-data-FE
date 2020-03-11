@@ -8,10 +8,11 @@ const SideBar = () => {
   return (
     <div className={styles.SideBar}>
       <section className={styles.navContainer} >
-        <NavLink exact className={styles.home} activeClassName={styles.active} to='/'>Home</NavLink>
-        <NavLink className={styles.detentions} activeClassName={styles.active} to='/detentions'>Detentions</NavLink>
-        <NavLink className={styles.persons} activeClassName={styles.active} to='/persons'>Persons</NavLink>
-        <NavLink className={styles.developers} activeClassName={styles.active} to='/developers'>Developers</NavLink>
+        <NavLink activeClassName={styles.active} to='/'>Home</NavLink>
+        <NavLink activeClassName={styles.active} to='/detentions'>Detentions</NavLink>
+        <NavLink activeClassName={styles.active} to='/persons'>Persons</NavLink>
+        <NavLink activeClassName={styles.active} to='/developers'>Developers</NavLink>
+        <NavLink activeClassName={styles.active} to='/charges'>Charges</NavLink>
       </section>
     </div>
   );

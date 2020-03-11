@@ -7,6 +7,7 @@ import HomePage from './HomePage/HomePage';
 import PersonsPage from './PersonsPage/PersonsPage';
 import DetentionsPage from './DetentionsPage/DetentionsPage';
 import DeveloperPage from './DeveloperPage/DeveloperPage';
+import ChargesPage from './ChargesPage/ChargesPage';
 import Header from './common/Header';
 import SideBar from './common/SideBar';
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/persons' component={PersonsPage} />
         <Route path='/detentions' component={DetentionsPage} />
         <Route path='/developers' component={DeveloperPage} />
+        <Route path='/charges' component={ChargesPage}/>
       </Router>
     </>
   );
