@@ -46,6 +46,15 @@ const PersonsPage = () => {
       </div>
       <button onClick={handleClick}>Search</button>
       <table className={styles.tbody}>
+        <thead>
+          <tr>
+            <th>Gender</th>
+            <th>Race</th>
+            <th>Age</th>
+            <th>Height</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
         <tbody  >
           {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
         </tbody>

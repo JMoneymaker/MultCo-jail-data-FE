@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PersonRow = ({ person }) => {
   return (
@@ -10,6 +11,10 @@ const PersonRow = ({ person }) => {
       <td>{person.weight}</td>
     </tr>
   );
+};
+
+PersonRow.propTypes = {
+  person: PropTypes.object.isRequired
 };
 
 export default PersonRow;
