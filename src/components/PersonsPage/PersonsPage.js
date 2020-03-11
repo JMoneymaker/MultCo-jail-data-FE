@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
+import tableStyles from '../common/Table.css';
 import formStyles from '../common/Form.css';
 import Paging from '../common/Paging/Paging';
 
@@ -46,14 +47,14 @@ const PersonsPage = () => {
         </select>
       </div>
       <button onClick={handleClick}>Search</button>
-      <table className={styles.tbody}>
+      <table className={tableStyles.Table}>
         <thead>
           <tr>
-            <th>Gender</th>
-            <th>Race</th>
-            <th>Age</th>
-            <th>Height</th>
-            <th>Weight</th>
+            <th><h4>Gender</h4></th>
+            <th><h4>Race</h4></th>
+            <th><h4>Age</h4></th>
+            <th><h4>Height</h4></th>
+            <th><h4>Weight</h4></th>
           </tr>
         </thead>
         <tbody  >
