@@ -6,7 +6,6 @@
 html {
     font-family: 'Playfair Display', serif;
 
-
     h5 {
         font-size: 2em;
     }
@@ -28,49 +27,46 @@ html {
         font-size: .5em;
     }
 
+    h4 {
+        font-size: 1.5em;
+    }
+
     p {
         font-size: 1em;
         font-family: Merriweather;
     }
 
-    table tr td {
-        border: 1px solid black;
-        padding: 15px;
-        font-family: Merriweather;
-        padding-top: 20px;
-      }
-
-      a {
+    a {
         text-decoration: none;
         font-weight: 700;
         color: black;
-       }
+    }
 
-       a:hover {
-           text-decoration: underline;
-           color: black;
-       }
+    a:hover {
+        text-decoration: underline;
+        color: black;
+    }
 
-       button {
-           height: 3vh;
-           font-size: 1.5em;
-           font-family: 'Playfair Display', serif;
-           text-align: center;
-           margin-left: 45%;
-           margin-bottom: 2vh;
-           padding-bottom: 4vh;
-           border-radius: 5%;
-           width: fit-content;
-       }
+    button {
+        height: 3vh;
+        font-size: 1.5em;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+        margin-left: 45%;
+        margin-bottom: 2vh;
+        padding-bottom: 4vh;
+        border-radius: 5%;
+        width: fit-content;
+    }
 
-       button:hover {
+    button:hover {
         border: 1px solid black;
-       }
+    }
 
-       button:active {
+    button:active {
         border: 2px solid rgb(85, 83, 83);
         background-color: rgb(228, 225, 225);
         color: rgb(85, 83, 83)
-       }
+    }
 
-    };
+};

@@ -1,0 +1,21 @@
+.table {
+
+    thead {
+      background-color: rgb(181,199,211);
+    }
+      
+    th {
+      text-align: center;
+      padding: .75em 1em .5em 1em;
+    }
+
+    tbody {
+      width: 60%;
+      text-align: left;
+      margin: auto;
+    }
+
+    tr {
+      border: 2px solid black;
+    }
+}
