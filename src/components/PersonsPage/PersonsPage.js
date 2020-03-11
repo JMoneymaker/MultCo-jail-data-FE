@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
+import formStyles from '../common/Form.css';
 import Paging from '../common/Paging/Paging';
 
 
@@ -25,15 +26,15 @@ const PersonsPage = () => {
   return (
     <main className={styles.pageBody}>
       <h1 className={styles.h1}>Sort Bookings By Age, Race, and Gender</h1>
-      <div className={styles.QueryControls}>
+      <div className={formStyles.QueryControls}>
         Minimum age:  <input type="text" value={minAge} onChange={({ target }) => setMinAge(target.value)} />
         Maximum Age:  <input type="text" value={maxAge} onChange={({ target }) => setMaxAge(target.value)} />
-        Gender:  <select className={styles.dropdown} onChange={({ target }) => setGender(target.value)}>
+        Gender:  <select className={formStyles.dropdown} onChange={({ target }) => setGender(target.value)}>
           <option value="">Any</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
-        Race:  <select className={styles.dropdown} onChange={({ target }) => setRace(target.value)}>
+        Race:  <select className={formStyles.dropdown} onChange={({ target }) => setRace(target.value)}>
           <option value="">Any</option>
           <option value="Black">Black</option>
           <option value="Hispanic">Hispanic</option>

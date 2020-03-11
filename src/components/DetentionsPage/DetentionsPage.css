@@ -20,28 +20,6 @@
   padding-right: 2vh;
 }
 
-.tbody {
-  width: 60%;
-  text-align: left;
-  margin: auto;
-}
-
-
-.QueryControls{
-  padding: 1em;
-  width: 90%;
-  text-align: center;
-  margin-left: 5%;
-  font-size: 1.5em;
 
 
 
-  input {
-    height: 30px;
-    width: 50px;
-  }
-}
-
-.dropdown {
-  height: 3vh;
-}
