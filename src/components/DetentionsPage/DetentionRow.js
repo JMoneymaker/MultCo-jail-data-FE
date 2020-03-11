@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './DetentionsPage.css';
-
+import tableStyles from '../common/Table.css';
 
 const DetentionRow = ({ detention, fetchSelectedDetention, toggleDetailsModal }) => {
   const handleClick = (id) => {
@@ -10,7 +9,7 @@ const DetentionRow = ({ detention, fetchSelectedDetention, toggleDetailsModal })
   };
 
   return (
-    <tr className={styles.DetentionPage}>
+    <tr className={tableStyles.Table}>
       <td>{detention.bookingNumber}</td>
       <td>{detention.bookingDate.slice(0, 10)}</td>
       <td>{detention.arrestingAgency}</td>
