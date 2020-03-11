@@ -1,22 +1,22 @@
 .DetailsModal {
-    position: fixed; 
+    position: fixed;
     padding: .5em;
-    left: 30vw; 
+    left: 30vw;
     top: 20vh;
     width: 35vw;
-    height: 20vh; 
+    height: 20vh;
     border: 1px solid #223493;
     border-radius: 1em;
-    background-color: whitesmoke;  
+    background-color: whitesmoke;
     z-index: 2;
     /* remove when talis styling in place */
-    font-size: 20px;   
+    font-size: 20px;
 
     .categoryDetails {
         padding: .5em 1em .5em 1em;
         width: 35vw;
     }
-    
+
     .key {
         font-weight: bolder;
     }
@@ -31,15 +31,15 @@
     ul {
         padding: .25em 0 .25em 0;
     }
-
-    }
-
     button {
-        float: right; 
-        color: lightgray; 
-        font-size: 16px;  
+        float: right;
+        color: lightgray;
+        font-size: 16px;
         font-weight: bold;
       }
+
+}
+
 
     .modalShow{
         display: flex;
@@ -71,4 +71,3 @@
         border: 2px solid black
     }
 
-      

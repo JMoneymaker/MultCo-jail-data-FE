@@ -6,6 +6,7 @@ import DetentionRow from './DetentionRow';
 import Paging from '../common/Paging/Paging';
 import DetailsModal from './DetailsModal';
 import styles from './DetentionsPage.css';
+import formStyles from '../common/Form.css'
 import { useDetailsModal } from '../../hooks/useDetailsModal';
 
 const DetentionsPage = () => {
@@ -23,9 +24,9 @@ const DetentionsPage = () => {
   return (
     <main className={styles.pageBody}>
       <h1 className={styles.h1}>Search all Detentions by Arresting Agency</h1>
-      <div className={styles.QueryControls}>
+      <div className={formStyles.QueryControls}>
         Arresting Agency:
-        <select onChange={({ target }) => setArrestingAgency(target.value)}>
+        <select className={formStyles.dropdown} onChange={({ target }) => setArrestingAgency(target.value)}>
           <option value="">Any</option>
           <option value="Beaverton Police">Beaverton Police</option>
           <option value="Multnomah County Sheriff Booking">Multnomah County Sheriff Booking</option>
