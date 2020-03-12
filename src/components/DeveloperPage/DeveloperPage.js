@@ -13,17 +13,17 @@ const DeveloperPage = () => {
       <SideBar />
       <main className={styles.DeveloperPage}>
         <div className={styles.contentContainer}>
-          <h1>About MCDC Data</h1>
+          <h1>About MCDC Data</h1><br/>
           <p>MCDC data is a public resource for information regarding detentions in Multnomah County, Oregon.  The data is collected daily from the Multnomah County Detention Center <a href="http://www.mcso.us/PAID/">inmate information page.</a></p><br/>
 
           <p>The visualizations on the home page are updated daily and intended to show Multnomah County’s tendency to follow the national trend of disproportionately detaining Black, Native American, and Hispanic people as compared to other groups.</p><br/>
 
-          <p> The API routes below provide direct access to the data for researchers.</p><br/>
+          <p> The API routes below provide direct access to the data for researchers.</p><br/><br/>
 
-          <p><span className={styles.queryInfo}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
+          <p><span className={styles.queryInfo}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p><br/>
           <div className={styles.routes}>
             <ul>
-              <h2>Person Routes</h2>
+              <h2>Person Routes</h2><br/>
               <li>
                 <span className={styles.routes}>Get ALL persons -
                 </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/persons</a>
@@ -39,9 +39,9 @@ const DeveloperPage = () => {
               </li>
               <li>
                 <span className={styles.routes}>Get count by AGE - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange" target="_blank">/countByAgeRange</a>
-              </li>
+              </li><br/>
 
-              <h2>Detention Routes</h2>
+              <h2>Detention Routes</h2><br/>
               <li>
                 <span className={styles.routes}>Get ALL detentions - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</a>
               </li>
