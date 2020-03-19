@@ -8,8 +8,6 @@ const getDetentionsOverTime = () => {
 };
 
 const DetentionsOverTimeChart = () => {
-  let displayData = [];
-
   const dummyData = [
     { date: '2020-03-03T03:02:43Z', count: 1000 },
     { date: '2020-03-10T03:02:43Z', count: 900 },
@@ -17,22 +15,14 @@ const DetentionsOverTimeChart = () => {
     { date: '2020-03-19T03:02:43Z', count: 500 }
   ];
 
-  function dataMunger(rawData) { 
-    rawData.map(item => {
-      const container = [];
-      container[0] = item.date.toDateString(),
-      container[1] = item.count;
-      return container;
-    });
-  }
-
-
-  const [detentionCounts, setDetentionCounts] = useState([
-    ['January 1', 1000],
-    ['March 15', 950],
-    ['March 20', 600],
-    ['March 22', 500]
-  ]);
+  const smartData = dummyData.map(item => {
+    let container = [];
+    container.push(item['date'].toString().slice(0, -10));
+    container.push(item.count);
+    return container;
+  });
+ 
+  const [detentionCounts, setDetentionCounts] = useState(smartData);
   
   
   // useEffect(() => {
@@ -55,7 +45,7 @@ const DetentionsOverTimeChart = () => {
         data= {[['', ''], //optional labels for axes
           ...detentionCounts]}
         options={{
-          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],
+          colors: ['#A2506A', '#1F4763', '#9161A2', '#13646A', '#058F7A'],
           legend: { position: 'none' },
           curveType: 'function'
         }}
