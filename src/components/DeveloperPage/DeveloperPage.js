@@ -74,7 +74,7 @@ const DeveloperPage = () => {
             </li>
           </ul>
         </div>
-        <p>This project developed and maintained by <a href="https://github.com/munizao" target="_blank" rel="noopener noreferrer">Ali Muniz</a>, <a href="https://github.com/JMoneymaker" target="_blank" rel="noopener noreferrer">Jamin Moneymaker</a>,  <a href="https://github.com/avnit77" target="_blank" rel="noopener noreferrer">Tali Avni</a>, and <a href="https://github.com/AaronMullan" target="_blank" rel="noopener noreferrer">Aaron Mullan</a>.  <a href="https://github.com/NickBrimmer" target="_blank" rel="noopener noreferrer">Nick Brimmer</a> also contributed to initial development.</p>
+        <p>This project developed and maintained by <a href="https://github.com/munizao" target="_blank" rel="noopener noreferrer">Ali Muniz</a>, <a href="https://github.com/JMoneymaker" target="_blank" rel="noopener noreferrer">Jasmin Moneymaker</a>,  <a href="https://github.com/avnit77" target="_blank" rel="noopener noreferrer">Tali Avni</a>, and <a href="https://github.com/AaronMullan" target="_blank" rel="noopener noreferrer">Aaron Mullan</a>.  <a href="https://github.com/NickBrimmer" target="_blank" rel="noopener noreferrer">Nick Brimmer</a> also contributed to initial development.</p>
         <div className="about">
         </div>
       </main>
