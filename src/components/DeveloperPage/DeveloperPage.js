@@ -68,9 +68,6 @@ const DeveloperPage = () => {
                 <span className={styles.routes}>Get CHARGE count by RACE - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByRace" target="_blank">/countChargesByRace</a>
               </li>
               <li>
-                <span className={styles.routes}>Get charge count by AGENCY - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByAgency" target="_blank">/countChargesByAgency</a>
-              </li>
-              <li>
                 <span className={styles.routes}>Get charge count by GENDER- </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByGender" target="_blank">/countChargesByGender</a>
               </li>
               <li>
