@@ -16,11 +16,11 @@ const DeveloperPage = () => {
           <h1>About MCDC Data</h1>
           <p>MCDC data is a public resource for information regarding detentions in Multnomah County, Oregon.  The data is collected daily from the Multnomah County Detention Center <a href="http://www.mcso.us/PAID/">inmate information page.</a></p>
 
-          <p>The visualizations on the home page are updated daily and intended to show Multnomah County’s tendency to follow the national trend of disproportionately detaining Black, Native American, and Hispanic people as compared to other groups.</p>
+          <p><span className={styles.notesEmphasis}>NOTE: Our collection of data starts on January 16, 2020.</span></p>
 
           <p> The API routes below provide direct access to the data for researchers.</p>
 
-          <p><span className={styles.queryInfo}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
+          <p><span className={styles.notesEmphasis}>NOTE: Get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
           <div className={styles.routes}>
             <h2>Person Routes</h2>
             <ul>
@@ -66,9 +66,6 @@ const DeveloperPage = () => {
               </li>
               <li>
                 <span className={styles.routes}>Get CHARGE count by RACE - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByRace" target="_blank">/countChargesByRace</a>
-              </li>
-              <li>
-                <span className={styles.routes}>Get charge count by AGENCY - </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByAgency" target="_blank">/countChargesByAgency</a>
               </li>
               <li>
                 <span className={styles.routes}>Get charge count by GENDER- </span><a className={styles.paths} href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByGender" target="_blank">/countChargesByGender</a>
