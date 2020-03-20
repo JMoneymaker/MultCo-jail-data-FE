@@ -8,30 +8,35 @@ const getDetentionsOverTime = () => {
 };
 
 const DetentionsOverTimeChart = () => {
-  const dummyData = [
-    { date: '2020-03-03T03:02:43Z', count: 1000 },
-    { date: '2020-03-10T03:02:43Z', count: 900 },
-    { date: '2020-03-16T03:02:43Z', count: 800 },
-    { date: '2020-03-19T03:02:43Z', count: 500 }
-  ];
+  // const dummyData = [
+  //   { date: '2020-03-03T03:02:43Z', count: 1000 },
+  //   { date: '2020-03-10T03:02:43Z', count: 900 },
+  //   { date: '2020-03-16T03:02:43Z', count: 800 },
+  //   { date: '2020-03-19T03:02:43Z', count: 500 }
+  // ];
 
-  const smartData = dummyData.map(item => {
-    let container = [];
-    container.push(item['date'].toString().slice(0, -10));
-    container.push(item.count);
-    return container;
-  });
+  // const smartData = dummyData.map(item => {
+  //   let container = [];
+  //   container.push(item['date'].toString().slice(0, -10));
+  //   container.push(item.count);
+  //   return container;
+  // });
  
-  const [detentionCounts, setDetentionCounts] = useState(smartData);
+  const [detentionCounts, setDetentionCounts] = useState();
   
   
-  // useEffect(() => {
-  //   getDetentionsOverTime()
-  //     .then(res => {
-  //       displayData = dataMunger(res);
-  //       setDetentionCounts(displayData);
-  //     });
-  // }, []);
+  useEffect(() => {
+    getDetentionsOverTime()
+      .then(res => {
+        const displayData = res.map(item => {
+          let container = [];
+          container.push(item['date'].toString().slice(0, -10));
+          container.push(item.count);
+          return container;
+        });
+        setDetentionCounts(displayData);
+      });
+  }, []);
 
 
   return (
