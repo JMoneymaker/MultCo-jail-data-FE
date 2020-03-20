@@ -1,14 +1,15 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
+import styles from './Charts.css';
 
 const PopulationByRaceChart = () => {
   
   return (
-    <>
-      <h1>Multnomah County 2017 Demographic Estimates</h1><br/>
+    <div className={styles.chartWrapper}>
+      <h2>2017 Demographic Estimates</h2>
       <Chart
-        width={'800px'}
-        height={'400px'}
+        width={'100%'}
+        height={'auto'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -23,9 +24,8 @@ const PopulationByRaceChart = () => {
         options={{
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
-        }}
-      />
-    </>
+        }} />
+    </div>
   );
 };
 

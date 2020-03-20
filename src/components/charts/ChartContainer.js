@@ -4,17 +4,17 @@ import DetentionsByGenderChart from './DetetionsByGender';
 import PopulationByRaceChart from './PopulationByRace';
 import DetentionsByRacePreHundredThousandChart from './DetentionsByRacePerHundredThousand';
 import DetentionsByAgencyChart from './DetentionsByAgency';
-import styles from './ChartContainer.css';
+import styles from './Charts.css';
 
 const Charts = () => {
 
   return (
     <main className={styles.ChartContainer}>
-      <PopulationByRaceChart /><br/>
-      <DetentionsByRaceChart /><br/>
-      <DetentionsByRacePreHundredThousandChart /><br/>
-      <DetentionsByGenderChart /><br/>
-      <DetentionsByAgencyChart /><br/>
+      <PopulationByRaceChart />
+      <DetentionsByRaceChart />
+      <DetentionsByRacePreHundredThousandChart />
+      <DetentionsByGenderChart />
+      <DetentionsByAgencyChart />
     </main>
   );
 };

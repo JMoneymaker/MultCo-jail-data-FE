@@ -1,0 +1,13 @@
+.ChartContainer {
+    text-align: center;
+    margin: auto;
+    width: 90vw;
+    background-color: rgb(164,202,164);
+};
+
+.chartWrapper {
+    width: 95%;
+    padding: 1em;
+    margin: 21em;
+}
+

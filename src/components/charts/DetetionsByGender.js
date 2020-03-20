@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
+import styles from './Charts.css';
 
 const getCountByGender = () => {
   return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByGender')
@@ -16,11 +17,11 @@ const DetentionsByGenderChart = () => {
   }, []);
 
   return (
-    <>
-      <h1>Detentions by Gender in Multnomah County</h1><br/>
+    <div className={styles.chartWrapper}>
+      <h2>Detentions by Gender</h2>
       <Chart
-        width={'800px'}
-        height={'400px'}
+        width={'100%'}
+        height={'auto'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -31,9 +32,8 @@ const DetentionsByGenderChart = () => {
         options={{
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#F7F8F8', '#1F4763', '#A2506A', '#56809A']
-        }}
-      />
-    </>
+        }} />
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
+import styles from './Charts.css';
 
 const getCountByRace = () => {
   return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace')
@@ -27,11 +28,11 @@ const DetentionsByRacePreHundredThousandChart = () => {
   }, []);
 
   return (
-    <>
-      <h1>Detentions Per 100,000 Population in Multnomah County</h1><br/>
+    <div className={styles.chartWrapper}>
+      <h2>Detentions Per 100,000</h2>
       <Chart
-        width={'800px'}
-        height={'400px'}
+        width={'100%'}
+        height={'auto'}
         chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[
@@ -46,9 +47,8 @@ const DetentionsByRacePreHundredThousandChart = () => {
         options={{
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],
           legend: { position: 'none' }
-        }}
-      />
-    </>
+        }} />
+    </div>
   );
 };
 
