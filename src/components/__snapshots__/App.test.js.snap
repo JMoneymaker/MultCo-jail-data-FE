@@ -22,10 +22,6 @@ exports[`App component renders App 1`] = `
       component={[Function]}
       path="/developers"
     />
-    <Route
-      component={[Function]}
-      path="/charges"
-    />
   </BrowserRouter>
 </Fragment>
 `;
