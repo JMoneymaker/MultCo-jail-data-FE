@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getAvgDetention } from '../services/dataFetch';
 
 const useAverageDetention = () => {
-  const [data, setData] = useState(NaN);
+  const [data, setData] = useState(0);
 
   const fetchAverageDetention = () => {
     getAvgDetention()
