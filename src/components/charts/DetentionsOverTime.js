@@ -29,14 +29,15 @@ const DetentionsOverTimeChart = () => {
       <Chart
         width={'800px'}
         height={'400px'}
-        chartType="Line"
+        chartType="LineChart"
         loader={<div>Loading Chart</div>}
         data= {[['', ''], //optional labels for axes
           ...detentionCounts]}
         options={{
+
+          vAxis: { viewWindow: { min: 0 } },
           colors: ['#A2506A', '#1F4763', '#9161A2', '#13646A', '#058F7A'],
-          legend: { position: 'none' },
-          curveType: 'function'
+          legend: { position: 'none' }
         }}
       />
     </>
