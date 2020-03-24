@@ -19,7 +19,7 @@ const DetentionsOverTimeChart = () => {
           container.push(item.count);
           return container;
         });
-        setDetentionCounts(displayData);
+        setDetentionCounts(displayData.slice(1)); //data from Jan 16 is bogus
       });
   }, []);
 
