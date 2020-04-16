@@ -1,4 +1,5 @@
 import React from 'react';
+import DetentionsOverTimeChart from './DetentionsOverTime';
 import DetentionsByRaceChart from './DetentionsByRace';
 import DetentionsByGenderChart from './DetetionsByGender';
 import PopulationByRaceChart from './PopulationByRace';
@@ -9,7 +10,8 @@ import styles from './Charts.css';
 const Charts = () => {
 
   return (
-    <main className={styles.Chart}>
+    <main className={styles.ChartContainer}>
+      <DetentionsOverTimeChart />
       <PopulationByRaceChart />
       <DetentionsByRaceChart />
       <DetentionsByRacePreHundredThousandChart />

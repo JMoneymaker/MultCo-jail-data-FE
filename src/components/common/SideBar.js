@@ -12,7 +12,6 @@ const SideBar = () => {
         <NavLink activeClassName={styles.active} to='/detentions'>Detentions</NavLink>
         <NavLink activeClassName={styles.active} to='/persons'>Persons</NavLink>
         <NavLink activeClassName={styles.active} to='/developers'>Developers</NavLink>
-        <NavLink activeClassName={styles.active} to='/charges'>Charges</NavLink>
       </section>
     </div>
   );
