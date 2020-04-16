@@ -26,7 +26,7 @@
         width: 100%;
         background-color: rgb(182,199,211);
         padding: .25em 0 .25em .25em;
-        font-size: 22px;
+        font-size: 1.5rem;
     }
 
     ul {
@@ -36,7 +36,7 @@
     button {
         float: right;
         color: lightgray;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: bold;
       }
 

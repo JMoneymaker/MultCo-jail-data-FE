@@ -30,7 +30,7 @@ const DetentionsByRaceChart = () => {
   }, []);
 
   return (
-    <div className={styles.chartWrapper}>
+    <div className={styles.ChartContainer}>
       <Chart
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
@@ -55,10 +55,10 @@ const DetentionsByRaceChart = () => {
           chartArea: {
             top:50
           },
-          backgroundColor: {
-            stroke: '#4322c0',
-            strokeWidth: 3
-          },  
+          // backgroundColor: {
+          //   stroke: '#A4CAA4',
+          //   strokeWidth: 10
+          // }, 
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }}/>

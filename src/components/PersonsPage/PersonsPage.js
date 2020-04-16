@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
-import styles from './PersonsPage.css';
 import tableStyles from '../common/Tables.css';
 import formStyles from '../common/Form.css';
 import Paging from '../common/Paging/Paging';
@@ -25,8 +24,8 @@ const PersonsPage = () => {
   };
 
   return (
-    <main className={styles.pageBody}>
-      <h1 className={styles.h1}>Sort Bookings By Age, Race, and Gender</h1>
+    <main>
+      <h1>Sort Bookings By Age, Race, and Gender</h1>
       <div className={formStyles.QueryControls}>
         Minimum age:  <input type="text" value={minAge} onChange={({ target }) => setMinAge(target.value)} />
         Maximum Age:  <input type="text" value={maxAge} onChange={({ target }) => setMaxAge(target.value)} />

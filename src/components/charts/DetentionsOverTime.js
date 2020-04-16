@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
+import styles from './Charts.css';
 
 
 const getDetentionsOverTime = () => {
@@ -15,7 +16,7 @@ const DetentionsOverTimeChart = () => {
       .then(res => {
         const displayData = res.counts.map(item => {
           let container = [];
-          container.push(item['date'].toString().slice(0, -14));
+          container.push(item['date'].toString().slice(6, -14));
           container.push(item.count);
           return container;
         });
@@ -24,23 +25,32 @@ const DetentionsOverTimeChart = () => {
   }, []);
 
   return (
-    <>
-      <h1>Detentions Over Time in Multnomah County</h1><br/>
+    
+    <div className={styles.ChartContainer}>
       <Chart
-        width={'800px'}
-        height={'400px'}
         chartType="LineChart"
         loader={<div>Loading Chart</div>}
         data= {[['', ''], //optional labels for axes
           ...detentionCounts]}
         options={{
-
+          title: 'Daily Detentions since 1/17/2020',
+          titleTextStyle: { 
+            color: 'black', 
+            fontName: 'Roboto', 
+            fontSize: '16' },
+          width:'100%',
+          height:'150%',
+          // backgroundColor: {
+          //   stroke: '#A4CAA4',
+          //   strokeWidth: 10
+          // },
           vAxis: { viewWindow: { min: 0 } },
           colors: ['#A2506A', '#1F4763', '#9161A2', '#13646A', '#058F7A'],
           legend: { position: 'none' }
         }}
       />
-    </>
+    </div>
+   
   );
 };
 

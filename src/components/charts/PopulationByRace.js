@@ -5,7 +5,7 @@ import styles from './Charts.css';
 const PopulationByRaceChart = () => {
   
   return (
-    <div className={styles.chartContainer}>
+    <div className={styles.ChartContainer}>
       <Chart
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
@@ -29,11 +29,10 @@ const PopulationByRaceChart = () => {
           chartArea: {
             top:50
           },
-          backgroundColor: {
-            fill: '#9161A2',
-            stroke: '#4322c0',
-            strokeWidth: 3,
-          },
+          // backgroundColor: {
+          //   stroke: '#A4CAA4',
+          //   strokeWidth: 10
+          // },
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }} />

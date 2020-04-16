@@ -5,7 +5,6 @@ import useDetention from '../../hooks/useDetention';
 import DetentionRow from './DetentionRow';
 import Paging from '../common/Paging/Paging';
 import DetailsModal from './DetailsModal';
-import styles from './DetentionsPage.css';
 import tableStyles from '../common/Tables.css';
 import formStyles from '../common/Form.css';
 import { useDetailsModal } from '../../hooks/useDetailsModal';
@@ -23,7 +22,7 @@ const DetentionsPage = () => {
     history.push(`/detentions?${newSearchParams}`);
   };
   return (
-    <main className={styles.Detentions}>
+    <main>
       <div className={formStyles.FormWrapper}>
         <h3>Search by Arresting Agency:</h3>
         <div className={formStyles.QueryControls}>
