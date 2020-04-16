@@ -1,9 +1,8 @@
 .DetailsModal {
     position: fixed;
     padding: .5em;
-    left: 30vw;
     top: 20vh;
-    width: 35vw;
+    width: 80vw;
     height: 20vh;
     border: 1px solid #223493;
     border-radius: 1em;
@@ -14,7 +13,9 @@
 
     .categoryDetails {
         padding: .5em 1em .5em 1em;
-        width: 35vw;
+        width: 95%;
+        margin: auto;
+        list-style: none;
     }
 
     .key {
@@ -31,6 +32,7 @@
     ul {
         padding: .25em 0 .25em 0;
     }
+    
     button {
         float: right;
         color: lightgray;
@@ -40,34 +42,33 @@
 
 }
 
+.modalShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    opacity: 1;
+    height: fit-content;
+}
 
-    .modalShow{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color:black;
-        opacity: 1;
-        height: fit-content;
-    }
+.modalHeader {
+    background: transparent;
+}
 
-    .modalHeader {
-        background: transparent;
-    }
+.modalHide {
+    opacity: 0;
+    pointer-events: none;
+}
 
-    .modalHide {
-        opacity: 0;
-        pointer-events: none;
-    }
+.bookingDetails {
+    border: 2px solid black
+}
 
-    .bookingDetails {
-        border: 2px solid black
-    }
+.demographicDetails {
+    border: 2px solid black
+}
 
-    .demographicDetails {
-        border: 2px solid black
-    }
-
-    .chargeDetails {
-        border: 2px solid black
-    }
+.chargeDetails {
+    border: 2px solid black
+}
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import tableStyles from '../common/Table.css';
+import tableStyles from '../common/Tables.css';
 
 const PersonRow = ({ person }) => {
   return (

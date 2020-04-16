@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import usePersons from '../../hooks/usePersons';
 import PersonRow from './PersonRow';
 import styles from './PersonsPage.css';
-import tableStyles from '../common/Table.css';
+import tableStyles from '../common/Tables.css';
 import formStyles from '../common/Form.css';
 import Paging from '../common/Paging/Paging';
 
@@ -57,7 +57,7 @@ const PersonsPage = () => {
             <th><h4>Weight</h4></th>
           </tr>
         </thead>
-        <tbody  >
+        <tbody>
           {persons.map((person) => <PersonRow key={person._id} person={person}/>)}
         </tbody>
       </table>

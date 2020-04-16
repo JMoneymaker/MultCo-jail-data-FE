@@ -9,7 +9,7 @@ import styles from './Charts.css';
 const Charts = () => {
 
   return (
-    <main className={styles.ChartContainer}>
+    <main className={styles.Chart}>
       <PopulationByRaceChart />
       <DetentionsByRaceChart />
       <DetentionsByRacePreHundredThousandChart />

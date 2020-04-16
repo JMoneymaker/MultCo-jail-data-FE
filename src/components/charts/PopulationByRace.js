@@ -5,11 +5,8 @@ import styles from './Charts.css';
 const PopulationByRaceChart = () => {
   
   return (
-    <div className={styles.chartWrapper}>
-      <h2>2017 Demographic Estimates</h2>
+    <div className={styles.chartContainer}>
       <Chart
-        width={'100%'}
-        height={'auto'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -22,6 +19,21 @@ const PopulationByRaceChart = () => {
           ['Native American', 8515],
         ]}
         options={{
+          title: '2017 Demographic Estimates',
+          titleTextStyle: { 
+            color: 'black', 
+            fontName: 'Roboto', 
+            fontSize: '16' },
+          width:'100%',
+          height: 'auto',
+          chartArea: {
+            top:50
+          },
+          backgroundColor: {
+            fill: '#9161A2',
+            stroke: '#4322c0',
+            strokeWidth: 3,
+          },
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }} />

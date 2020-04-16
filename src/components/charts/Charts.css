@@ -1,13 +1,17 @@
-.ChartContainer {
+.Chart {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    padding: 1em;
     text-align: center;
     margin: auto;
     width: 90vw;
     background-color: rgb(164,202,164);
+    
 };
 
-.chartWrapper {
+.chartContainer {
     width: 95%;
-    padding: 1em;
-    margin: 21em;
+    margin: auto;
 }
 

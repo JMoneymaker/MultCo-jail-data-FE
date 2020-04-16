@@ -6,10 +6,6 @@
 html {
     font-family: 'Roboto', serif;
 
-    h5 {
-        font-size: 2em;
-    }
-
     h1 {
         font-size: 2em;
         font-weight: 690;
@@ -31,7 +27,7 @@ html {
 
     p {
         font-size: 1em;
-        font-family: Roboto;
+        font-family: 'Roboto';
     }
 
     a {

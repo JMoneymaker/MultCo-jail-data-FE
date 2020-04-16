@@ -17,11 +17,8 @@ const DetentionsByGenderChart = () => {
   }, []);
 
   return (
-    <div className={styles.chartWrapper}>
-      <h2>Detentions by Gender</h2>
+    <div className={styles.chartContainer}>
       <Chart
-        width={'100%'}
-        height={'auto'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -30,8 +27,22 @@ const DetentionsByGenderChart = () => {
           ['Male', maleCount],
         ]}
         options={{
+          title: 'Detentions by Gender',
+          titleTextStyle: { 
+            color: 'black', 
+            fontName: 'Roboto', 
+            fontSize: '16' },
+          width:'100%',
+          height: 'auto',
+          chartArea: {
+            top:50
+          },
+          backgroundColor: {
+            stroke: '#4322c0',
+            strokeWidth: 3
+          },
           is3D: true,
-          colors: ['#058F7A', '#9161A2', '#13646A', '#F7F8F8', '#1F4763', '#A2506A', '#56809A']
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }} />
     </div>
   );

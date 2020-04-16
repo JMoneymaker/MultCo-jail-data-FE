@@ -31,10 +31,7 @@ const DetentionsByRaceChart = () => {
 
   return (
     <div className={styles.chartWrapper}>
-      <h2>Detentions by Race</h2>
       <Chart
-        width={'100%'}
-        height={'auto'}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -48,6 +45,20 @@ const DetentionsByRaceChart = () => {
           ['Native American', nativeAmericanCount],
         ]}
         options={{
+          title: 'Detentions by Race',
+          titleTextStyle: { 
+            color: 'black', 
+            fontName: 'Roboto', 
+            fontSize: '16' },
+          width:'100%',
+          height: 'auto',
+          chartArea: {
+            top:50
+          },
+          backgroundColor: {
+            stroke: '#4322c0',
+            strokeWidth: 3
+          },  
           is3D: true,
           colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }}/>

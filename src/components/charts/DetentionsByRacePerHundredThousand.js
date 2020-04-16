@@ -29,11 +29,8 @@ const DetentionsByRacePreHundredThousandChart = () => {
 
   return (
     <div className={styles.chartWrapper}>
-      <h2>Detentions Per 100,000</h2>
       <Chart
-        width={'100%'}
-        height={'auto'}
-        chartType="Bar"
+        chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
           ['Race', ''],
@@ -45,8 +42,23 @@ const DetentionsByRacePreHundredThousandChart = () => {
           ['Asian', asianCount / 72700 * 100000],
         ]}
         options={{
-          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A'],
-          legend: { position: 'none' }
+          title: 'Detentions Per 100,000',
+          titleTextStyle: { 
+            color: 'black', 
+            fontName: 'Roboto', 
+            fontSize: '16' },
+          width:'100%',
+          height: 'auto',
+          chartArea: {
+            top:50
+          },
+          backgroundColor: {
+            stroke: '#4322c0',
+            strokeWidth: 10
+          },
+          padding: 5,  
+          is3D: true,
+          colors: ['#058F7A', '#9161A2', '#13646A', '#1F4763', '#A2506A', '#56809A']
         }} />
     </div>
   );
